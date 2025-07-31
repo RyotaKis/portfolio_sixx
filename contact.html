@@ -2,8 +2,11 @@
 <html lang="fr">
 <head>
     <script>
-      if (window.innerWidth <= 700 && window.location.pathname.endsWith('contact.html')) {
-        window.location.replace('contact.mobile.html');
+      if (window.innerWidth <= 700) {
+        var path = window.location.pathname;
+        if (path.endsWith('contact.html') || path.endsWith('/contact') || path.match(/contact$/)) {
+          window.location.replace('contact.mobile.html');
+        }
       }
     </script>
     <meta charset="UTF-8">

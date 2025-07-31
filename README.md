@@ -1,3 +1,4 @@
+
 # 🚀 Portfolio Futuriste Geek-Otaku
 
 Un portfolio moderne avec design cyberpunk, animations fluides et thème futuriste geek-otaku !
@@ -108,8 +109,4 @@ Design inspiré de :
 - Culture geek/otaku
 - Tendances web modernes
 
----
 
-**Créé avec ❤️ et beaucoup de café ☕**
-
-Ton portfolio futuriste est prêt ! Modifie le contenu, déploie et impressionne tes recruteurs ! 🚀 

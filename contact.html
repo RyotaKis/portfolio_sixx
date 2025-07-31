@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <script>
-      if (window.innerWidth <= 700) {
-        var path = window.location.pathname;
-        if (path.endsWith('contact.html') || path.endsWith('/contact') || path.match(/contact$/)) {
-          window.location.replace('contact.mobile.html');
-        }
-      }
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Sixx</title>
@@ -63,8 +55,8 @@
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
             <div class="theme-toggle">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                <svg id="themeIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
                 </svg>
             </div>
         </div>
@@ -460,13 +452,24 @@
 
 </style>
 <script>
-// Gestion du mode jour/nuit
+// Gestion du mode jour/nuit améliorée
 function setTheme(theme) {
-  document.body.setAttribute('data-theme', theme);
+  document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
+  // Changer l'icône
+  const icon = document.getElementById('themeIcon');
+  if(icon) {
+    if(theme === 'light') {
+      icon.innerHTML = '<circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/>';
+      icon.setAttribute('stroke', '#06b6d4');
+    } else {
+      icon.innerHTML = '<path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>';
+      icon.setAttribute('stroke', '#f59e0b');
+    }
+  }
 }
 function toggleTheme() {
-  const current = document.body.getAttribute('data-theme') || 'dark';
+  const current = document.documentElement.getAttribute('data-theme') || 'dark';
   setTheme(current === 'dark' ? 'light' : 'dark');
 }
 document.addEventListener('DOMContentLoaded', function() {

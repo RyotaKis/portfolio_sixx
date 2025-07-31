@@ -11,6 +11,35 @@
       color: #fff;
       margin: 0;
       padding: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+    [data-theme="light"] body {
+      background: #f6f6f6;
+      color: #18181b;
+    }
+    [data-theme="light"] .navbar {
+      background: #fff;
+      box-shadow: 0 2px 8px #06b6d4;
+    }
+    [data-theme="light"] .navbar a {
+      color: #18181b;
+    }
+    [data-theme="light"] .contact-card {
+      background: #fff;
+      color: #18181b;
+      box-shadow: 0 2px 8px #06b6d4;
+    }
+    [data-theme="light"] .form-input, [data-theme="light"] .form-textarea {
+      background: #f3f3f3;
+      color: #18181b;
+    }
+    [data-theme="light"] .btn {
+      background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+      color: #fff;
+    }
+    [data-theme="light"] .footer {
+      background: #fff;
+      color: #6366f1;
     }
     .navbar {
       background: #18181b;
@@ -103,6 +132,12 @@
     <a href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="contact.mobile.html" class="active">Contact</a>
+    <span id="themeToggleMobile" style="float:right;position:absolute;right:18px;top:14px;cursor:pointer;">
+      <svg id="themeIconMobile" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"/>
+        <path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/>
+      </svg>
+    </span>
   </nav>
   <section class="contact-section">
     <div class="contact-title">Contactez-moi</div>
@@ -121,5 +156,37 @@
     </form>
   </section>
   <footer class="footer">&copy; 2024 Sixx. Tous droits réservés.</footer>
+</footer>
+
+<script>
+// Gestion du mode jour/nuit mobile
+function setThemeMobile(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('themeMobile', theme);
+  // Changer l'icône
+  const icon = document.getElementById('themeIconMobile');
+  if(icon) {
+    if(theme === 'light') {
+      icon.innerHTML = '<circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/>';
+      icon.setAttribute('stroke', '#06b6d4');
+    } else {
+      icon.innerHTML = '<path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>';
+      icon.setAttribute('stroke', '#f59e0b');
+    }
+  }
+}
+function toggleThemeMobile() {
+  const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  setThemeMobile(current === 'dark' ? 'light' : 'dark');
+}
+document.addEventListener('DOMContentLoaded', function() {
+  // Appliquer le thème sauvegardé
+  const saved = localStorage.getItem('themeMobile');
+  setThemeMobile(saved ? saved : 'dark');
+  // Toggle au clic sur l'icône
+  const themeToggle = document.getElementById('themeToggleMobile');
+  if(themeToggle) themeToggle.addEventListener('click', toggleThemeMobile);
+});
+</script>
 </body>
 </html>

@@ -408,95 +408,6 @@
         box-shadow: 0 4px 16px #06b6d4;
     }
     </style>
-    /* Animations et styles pour la carte contact direct et les icônes réseaux */
-    .contact-title {
-        font-size: 1.5em;
-        font-weight: 700;
-        margin-bottom: 1.2em;
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-        color: #06b6d4;
-        letter-spacing: 0.04em;
-        animation: fadeInUp 1s cubic-bezier(.77,0,.175,1) forwards;
-        opacity: 0;
-    }
-    .contact-card {
-        position: relative;
-        overflow: hidden;
-        animation: fadeInUp 1.2s cubic-bezier(.77,0,.175,1) forwards;
-        opacity: 0;
-    }
-    .contact-card::before {
-        content: '';
-        position: absolute;
-        top: -40px; left: -40px;
-        width: 120px; height: 120px;
-        background: radial-gradient(circle, #06b6d4 0%, transparent 80%);
-        opacity: 0.18;
-        filter: blur(12px);
-        animation: pulseGlow 2.5s infinite alternate;
-        z-index: 0;
-    }
-    @keyframes fadeInUp {
-        0% { opacity: 0; transform: translateY(40px); }
-        100% { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes pulseGlow {
-        0% { opacity: 0.18; }
-        100% { opacity: 0.32; }
-    }
-    .social-links {
-        display: flex;
-        gap: 1em;
-        margin-top: 1.5em;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-    .social-icon {
-        font-size: 1.5em;
-        color: #06b6d4;
-        background: rgba(6,182,212,0.08);
-        border-radius: 50%;
-        padding: 0.5em;
-        box-shadow: 0 2px 8px rgba(6,182,212,0.12);
-        transition: color 0.2s, background 0.2s, transform 0.2s;
-        position: relative;
-        animation: iconPop 1.2s cubic-bezier(.77,0,.175,1) forwards;
-        opacity: 0;
-    }
-    .social-icon:hover {
-        color: #fff;
-        background: linear-gradient(135deg, #06b6d4 60%, #6366f1 100%);
-        transform: scale(1.18) rotate(-8deg);
-        box-shadow: 0 4px 16px #06b6d4;
-    }
-    @keyframes iconPop {
-        0% { opacity: 0; transform: scale(0.7) translateY(20px); }
-        100% { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    .icon-bg {
-        background: linear-gradient(135deg, #06b6d4 60%, #6366f1 100%);
-        color: #fff;
-        border-radius: 50%;
-        width: 2.5em;
-        height: 2.5em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3em;
-        box-shadow: 0 2px 8px rgba(6,182,212,0.15);
-        transition: background 0.2s, transform 0.2s;
-        animation: iconPop 1.2s cubic-bezier(.77,0,.175,1) forwards;
-        opacity: 0;
-    }
-    .icon-bg.whatsapp { background: linear-gradient(135deg, #25d366 60%, #128c7e 100%); }
-    .icon-bg.phone { background: linear-gradient(135deg, #ff6c6c 60%, #3f3d56 100%); }
-    .icon-bg.location { background: linear-gradient(135deg, #6366f1 60%, #06b6d4 100%); }
-    .icon-bg:hover {
-        transform: scale(1.12) rotate(6deg);
-        box-shadow: 0 4px 16px #06b6d4;
-    }
     </style>
     <script>
         // Forcer l'apparition des .fade-in si jamais le JS d'animation ne les gère pas
@@ -531,10 +442,43 @@
             });
         }
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
-        });
-    </script>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="footer-text">&copy; 2024 Sixx. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</style>
+<script>
+// Gestion du mode jour/nuit
+function setTheme(theme) {
+  document.body.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+}
+function toggleTheme() {
+  const current = document.body.getAttribute('data-theme') || 'dark';
+  setTheme(current === 'dark' ? 'light' : 'dark');
+}
+document.addEventListener('DOMContentLoaded', function() {
+  // Apparition fade-in
+  document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+  // Appliquer le thème sauvegardé
+  const saved = localStorage.getItem('theme');
+  setTheme(saved ? saved : 'dark');
+  // Toggle au clic sur l'icône
+  const themeToggle = document.querySelector('.theme-toggle');
+  if(themeToggle) themeToggle.addEventListener('click', toggleTheme);
+});
+</script>
 </body>
 </html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Sixx</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Background Animations -->
+    <div class="background-animation">
+        <div class="geometric-flow"></div>
+        <div class="grid-animation"></div>
+        <div class="energy-flow"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <div class="logo-six">6</div>
+                <div class="logo-text">Sixx</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mes <span class="typing-text">Services</span></h1>
+            <p>Solutions sur mesure pour donner vie à vos projets digitaux</p>
+        </div>
+    </section>
+
+    <!-- Services Section Personnalisée -->
+    <section class="section" id="mes-services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">MES SERVICES <i class="fa-solid fa-rocket icon-hover-animate" style="color:#06b6d4;"></i></h2>
+                
+                <p class="section-description" style="max-width:700px;margin:0 auto 2rem auto;">
+                    <i class="fa-solid fa-sparkles icon-hover-animate" style="color:#6366f1;"></i> Chaque projet est unique, et c’est pourquoi j’offre des services sur mesure, pensés pour répondre à des besoins concrets avec style, précision et efficacité.<br>
+                    Mon approche ? Être à la fois créatif <i class="fa-solid fa-lightbulb icon-hover-animate" style="color:#f59e0b;"></i> et rigoureux <i class="fa-solid fa-gears icon-hover-animate" style="color:#6366f1;"></i>, à l’écoute de votre vision tout en apportant mon expertise.
+                </p>
+                <div class="section-divider" style="height:2px;width:80px;background:linear-gradient(90deg,#6366f1,#06b6d4,#f59e0b);margin:1.5rem auto;"></div>
+                <p class="section-subtitle" style="font-size:1.1rem;"><i class="fa-solid fa-lightbulb icon-hover-animate" style="color:#f59e0b;"></i> Voici ce que je propose :</p>
+            </div>
+            <div class="grid grid-2" style="gap:2.5rem;">
+                <div class="card hover-3d" style="animation-delay:0.2s;">
+                    <img src="assets/laptop-code.jpg" alt="Développement Web & Mobile" style="width:100%;border-radius:10px 10px 0 0;object-fit:cover;max-height:180px;margin-bottom:1rem;">
+                    <div class="service-icon" style="font-size:2.5rem;color:#6366f1;">
+                        <i class="fa-solid fa-laptop-code icon-hover-animate"></i>
+                    </div>
+                    <h3>Développement Web & Mobile <i class="fa-solid fa-mobile-screen-button icon-hover-animate" style="color:#06b6d4;"></i></h3>
+                    <p>Je conçois des interfaces modernes, performantes et optimisées pour offrir la meilleure expérience à vos utilisateurs.<br>
+                    Du simple site vitrine à des applications web ou mobiles plus avancées, je développe des solutions adaptées à vos besoins, avec une attention particulière au design, à la fluidité et à la compatibilité multi-supports.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check-circle icon-hover-animate" style="color:#10b981;"></i> Un site ou une appli responsive, rapide et bien codée</li>
+                        <li><i class="fa-solid fa-layer-group icon-hover-animate" style="color:#6366f1;"></i> Une architecture claire et évolutive</li>
+                        <li><i class="fa-solid fa-eye icon-hover-animate" style="color:#f59e0b;"></i> Un rendu visuel pro et une UX intuitive</li>
+                        <li><i class="fa-solid fa-handshake-angle icon-hover-animate" style="color:#06b6d4;"></i> Un accompagnement technique et des conseils à chaque étape</li>
+                    </ul>
+                </div>
+                <div class="card hover-3d" style="animation-delay:0.4s;">
+                    <img src="assets/rw.jpg" alt="Rédaction Web & Copywriting" style="width:100%;border-radius:10px 10px 0 0;object-fit:cover;max-height:180px;margin-bottom:1rem;">
+                    <div class="service-icon" style="font-size:2.5rem;color:#f59e0b;">
+                        <i class="fa-solid fa-pen-nib icon-hover-animate"></i>
+                    </div>
+                    <h3>Rédaction Web & Copywriting <i class="fa-solid fa-feather-pointed icon-hover-animate" style="color:#6366f1;"></i></h3>
+                    <p>Des contenus clairs, percutants et adaptés à votre public.<br>
+                    Qu’il s’agisse d’articles de blog, de pages web, de fiches produits ou de newsletters, je rédige avec soin pour capter l’attention et transmettre votre message efficacement.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-arrow-trend-up icon-hover-animate" style="color:#10b981;"></i> Des textes optimisés pour le SEO</li>
+                        <li><i class="fa-solid fa-comments icon-hover-animate" style="color:#06b6d4;"></i> Une communication fluide, humaine et engageante</li>
+                        <li><i class="fa-solid fa-user-pen icon-hover-animate" style="color:#f59e0b;"></i> Une rédaction adaptée à votre ton et vos objectifs</li>
+                    </ul>
+                </div>
+                <div class="card hover-3d" style="animation-delay:0.6s;">
+                    <img src="assets/translate.jpg" alt="Traduction FR EN" style="width:100%;border-radius:10px 10px 0 0;object-fit:cover;max-height:180px;margin-bottom:1rem;">
+                    <div class="service-icon" style="font-size:2.5rem;color:#06b6d4;">
+                        <i class="fa-solid fa-language icon-hover-animate"></i>
+                    </div>
+                    <h3>Traduction FR ↔ EN <i class="fa-solid fa-arrow-right-arrow-left icon-hover-animate" style="color:#6366f1;"></i></h3>
+                    <p>Traduire, ce n’est pas juste changer de langue, c’est transmettre une intention.<br>
+                    Grâce à une excellente maîtrise du français et de l’anglais, je traduis vos textes avec fidélité, nuance et naturel.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-spell-check icon-hover-animate" style="color:#10b981;"></i> Des traductions fidèles, fluides et sans fautes</li>
+                        <li><i class="fa-solid fa-face-smile icon-hover-animate" style="color:#f59e0b;"></i> Un ton respecté et adapté à la culture cible</li>
+                        <li><i class="fa-solid fa-magnifying-glass icon-hover-animate" style="color:#06b6d4;"></i> Une relecture complète avant livraison</li>
+                    </ul>
+                </div>
+                <div class="card hover-3d" style="animation-delay:0.8s;">
+                    <img src="assets/other.jpg" alt="Services complémentaires" style="width:100%;border-radius:10px 10px 0 0;object-fit:cover;max-height:180px;margin-bottom:1rem;">
+                    <div class="service-icon" style="font-size:2.5rem;color:#10b981;">
+                        <i class="fa-solid fa-puzzle-piece icon-hover-animate"></i>
+                    </div>
+                    <h3>Services complémentaires <i class="fa-solid fa-wand-magic-sparkles icon-hover-animate" style="color:#f59e0b;"></i></h3>
+                    <p>Besoin d’un coup de main pour relire vos contenus, corriger un texte, mettre en page un document ou créer un petit visuel ?<br>
+                    Je peux aussi vous aider ponctuellement sur des tâches annexes, selon disponibilité.<br>
+                    <span style="color:#6366f1;font-weight:600;">Exemples :</span> Correction orthographique, mise en page de CV, création de visuels simples, relecture de documents, etc.</p>
+                </div>
+            </div>
+            <div class="section-cta" style="margin-top:3rem;text-align:center;animation-delay:1.2s;">
+                <p style="font-size:1.15rem;margin-bottom:1.2rem;"><i class="fa-solid fa-envelope-open-text icon-hover-animate" style="color:#6366f1;"></i> Envie de travailler ensemble ?<br>
+                Si l’un de ces services correspond à vos besoins ou si vous avez un projet un peu particulier, n’hésitez pas à me contacter.<br>
+                Je serai ravi d’en discuter avec vous et de vous proposer une solution personnalisée.</p>
+                <a href="contact.html" class="btn magnetic" style="font-size:1.1rem;padding:14px 32px;">Contactez-moi <i class="fa-solid fa-paper-plane icon-hover-animate"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Fin Services Section Personnalisée -->
+
+    <!-- Process Section enrichie -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mon Processus <i class="fa-solid fa-diagram-project icon-hover-animate" style="color:#06b6d4;"></i></h2>
+                <p class="section-subtitle">Une méthode claire, humaine et efficace pour chaque projet</p>
+                <p class="section-description" style="max-width:700px;margin:0 auto 2rem auto;">
+                    <i class="fa-solid fa-route icon-hover-animate" style="color:#6366f1;"></i> Mon accompagnement se déroule en 4 grandes étapes, pour garantir un résultat sur-mesure, sans stress et avec un vrai suivi.
+                </p>
+            </div>
+            <div class="grid grid-4">
+                <div class="card">
+                    <div class="process-number">01</div>
+                    <h3>Consultation <i class="fa-solid fa-comments icon-hover-animate" style="color:#6366f1;"></i></h3>
+                    <p>On échange sur vos besoins, vos objectifs, vos contraintes et vos inspirations.<br>
+                    <span style="color:#f59e0b;font-weight:600;">Exemple :</span> "Je veux un site vitrine moderne pour mon activité de coaching, avec une page contact et un blog."</p>
+                </div>
+                <div class="card">
+                    <div class="process-number">02</div>
+                    <h3>Conception <i class="fa-solid fa-pencil-ruler icon-hover-animate" style="color:#f59e0b;"></i></h3>
+                    <p>Je réalise des maquettes, des wireframes ou des plans d’action selon le projet.<br>
+                    <span style="color:#6366f1;font-weight:600;">Exemple :</span> Présentation d'une maquette Figma, choix des couleurs, validation du parcours utilisateur.</p>
+                </div>
+                <div class="card">
+                    <div class="process-number">03</div>
+                    <h3>Développement <i class="fa-solid fa-code icon-hover-animate" style="color:#10b981;"></i></h3>
+                    <p>Je passe à la réalisation : développement, rédaction, traduction, design…<br>
+                    <span style="color:#f59e0b;font-weight:600;">Exemple :</span> Création du site, rédaction des textes, intégration des contenus, tests sur mobile et desktop.</p>
+                </div>
+                <div class="card">
+                    <div class="process-number">04</div>
+                    <h3>Livraison <i class="fa-solid fa-rocket icon-hover-animate" style="color:#06b6d4;"></i></h3>
+                    <p>Je livre le projet finalisé, vous accompagne pour la prise en main, et reste disponible pour toute question ou ajustement.<br>
+                    <span style="color:#6366f1;font-weight:600;">Exemple :</span> Mise en ligne, formation rapide à l’édition du contenu, support post-livraison.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin Process Section enrichie -->
+
+    <!-- Technologies Section enrichie -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technologies Utilisées <i class="fa-solid fa-microchip icon-hover-animate" style="color:#6366f1;"></i></h2>
+                <p class="section-subtitle">Un stack moderne, robuste et évolutif</p>
+                <p class="section-description" style="max-width:700px;margin:0 auto 2rem auto;">
+                    <i class="fa-solid fa-laptop-code icon-hover-animate" style="color:#06b6d4;"></i> J’utilise les technologies les plus fiables et performantes du marché, pour garantir la qualité, la sécurité et la pérennité de vos projets.
+                </p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Frontend <i class="fa-brands fa-react icon-hover-animate" style="color:#61dafb;"></i></h3>
+                    <p>Pour des interfaces modernes, dynamiques et responsives.</p>
+                    <ul>
+                        <li>React & Next.js <i class="fa-brands fa-react icon-hover-animate"></i></li>
+                        <li>Vue.js & Nuxt.js <i class="fa-brands fa-vuejs icon-hover-animate" style="color:#42b883;"></i></li>
+                        <li>HTML5 & CSS3 <i class="fa-brands fa-html5 icon-hover-animate" style="color:#e34c26;"></i> <i class="fa-brands fa-css3-alt icon-hover-animate" style="color:#2965f1;"></i></li>
+                        <li>JavaScript ES6+ <i class="fa-brands fa-js icon-hover-animate" style="color:#f7df1e;"></i></li>
+                        <li>Tailwind CSS <i class="fa-solid fa-wind icon-hover-animate" style="color:#38bdf8;"></i></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Backend <i class="fa-solid fa-server icon-hover-animate" style="color:#10b981;"></i></h3>
+                    <p>Pour des applications puissantes, sécurisées et évolutives.</p>
+                    <ul>
+                        <li>Node.js & Express <i class="fa-brands fa-node-js icon-hover-animate" style="color:#3c873a;"></i></li>
+                        <li>APIs RESTful <i class="fa-solid fa-plug-circle-bolt icon-hover-animate" style="color:#6366f1;"></i></li>
+                        <li>JWT Authentication <i class="fa-solid fa-key icon-hover-animate" style="color:#f59e0b;"></i></li>
+                        <li>WebSockets <i class="fa-solid fa-wifi icon-hover-animate" style="color:#06b6d4;"></i></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Outils & Déploiement <i class="fa-solid fa-cloud-arrow-up icon-hover-animate" style="color:#6366f1;"></i></h3>
+                    <p>Pour un workflow fluide, du développement à la mise en ligne.</p>
+                    <ul>
+                        <li>Git & GitHub <i class="fa-brands fa-git-alt icon-hover-animate" style="color:#f34f29;"></i> <i class="fa-brands fa-github icon-hover-animate" style="color:#333;"></i></li>
+                        <li>Vercel & Netlify <i class="fa-solid fa-cloud icon-hover-animate" style="color:#06b6d4;"></i></li>
+                        <li>Heroku & Railway <i class="fa-solid fa-train icon-hover-animate" style="color:#f59e0b;"></i></li>
+                        <li>Figma & Adobe XD <i class="fa-brands fa-figma icon-hover-animate" style="color:#a259ff;"></i> <i class="fa-brands fa-adobe icon-hover-animate" style="color:#ff0000;"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin Technologies Section enrichie -->
+
+    <!-- CTA Section enrichie -->
+    <section class="section">
+        <div class="container">
+            <div class="card text-center" style="padding:3rem 2rem;">
+                <h2>Prêt à concrétiser votre projet ?</h2>
+                <p style="font-size:1.2rem;">Discutons de vos besoins et créons ensemble quelque chose d'extraordinaire.<br> Je m'engage à vous accompagner à chaque étape, de l'idée à la mise en ligne, avec passion et professionnalisme.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn magnetic">Démarrer un projet <i class="fa-solid fa-paper-plane"></i></a>
+                    <a href="portfolio.html" class="btn btn-secondary magnetic">Voir mes réalisations <i class="fa-solid fa-eye"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin CTA Section enrichie -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="footer-text">&copy; 2024 Sixx. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

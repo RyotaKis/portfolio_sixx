@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sixx</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Background Animations -->
+    <div class="background-animation">
+        <div class="geometric-flow"></div>
+        <div class="grid-animation"></div>
+        <div class="energy-flow"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <div class="logo-six">6</div>
+                <div class="logo-text">Sixx</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Discutons de votre projet&nbsp;!</h1>
+        <p class="hero-main-text">Un besoin web, une idée à concrétiser, ou juste une question&nbsp;? Je vous réponds sous 24h, avec écoute et expertise.</p>
+        <p class="hero-cta">Contact direct, devis gratuit, confidentialité garantie.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <!-- Bloc contact direct amélioré -->
+          <div class="card contact-direct enhanced-card">
+            <h2 class="contact-title"><i class="fa-solid fa-bolt"></i> Contact direct</h2>
+            <ul class="contact-info">
+              <li class="contact-item">
+                <span class="icon-bg"><i class="fa-solid fa-envelope"></i></span>
+                <a href="mailto:phaneldim06@gmail.com" id="mainEmail">phaneldim06@gmail.com</a>
+                <button id="copyEmailBtn" class="copy-btn">Copier</button>
+              </li>
+              <li class="contact-item">
+                <span class="icon-bg whatsapp"><i class="fa-brands fa-whatsapp"></i></span>
+                <a href="https://wa.me/22941778479" target="_blank">+229 01 41 77 84 79</a>
+              </li>
+              <li class="contact-item">
+                <span class="icon-bg phone"><i class="fa-solid fa-phone"></i></span>
+                <a href="tel:+2290151082826">+229 51 08 28 26</a>
+              </li>
+            </ul>
+            <div class="social-links enhanced-social">
+              <a href="https://github.com/RyotaKis" title="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+              <a href="#" title="LinkedIn" class="social-icon"><i class="fab fa-linkedin"></i></a>
+              <a href=" https://x.com/PhanelD06?t=38uy_fDl0OYh0vqq2z_Piw&s=08 " title="X" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.instagram.com/ch_phanel_sixx?igsh=aDB1Nzg3NGF2OHQw" title="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/chph.06" title="Facebook" class="social-icon"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.reddit.com/u/Ch_Ph_06/s/QX6G4yXFIi" title="Reddit" class="social-icon"><i class="fab fa-reddit"></i></a>
+              <a href="https://www.t.me/phanel_006" title="Telegram" class="social-icon"><i class="fab fa-telegram"></i></a>
+              <a href="https://www.tiktok.com/@ch__ph__sixx?_t=ZM-8yRZ36v7Nqw&_r=1" title="Tiktok" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <!-- Formulaire de contact amélioré -->
+          <div class="card contact-form-card enhanced-card">
+            <h2 class="contact-title"><i class="fa-solid fa-paper-plane"></i> Envoyez-moi un message</h2>
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <input type="text" name="name" placeholder="Nom complet" required class="form-input enhanced-input">
+                <input type="email" name="email" placeholder="Email" required class="form-input enhanced-input">
+              </div>
+              <div class="form-row">
+                <input type="text" name="subject" placeholder="Objet" required class="form-input enhanced-input">
+              </div>
+              <div class="form-row">
+                <select name="projectType" required class="form-input enhanced-input">
+                  <option value="">Type de projet</option>
+                  <option value="site-web">Site web</option>
+                  <option value="application">Application web</option>
+                  <option value="application">Projet en Vibe</option>
+                  <option value="ecommerce">E-commerce</option>
+                  <option value="maintenance">Maintenance</option>
+                  <option value="autre">Autre</option>
+                </select>
+                <select name="budget" class="form-input enhanced-input">
+                  <option value="">Budget</option>
+                  
+              </select>
+              <div id="currencyRow" style="display:none; margin-top:0.5em;">
+                <select name="currency" id="currencySelect" class="form-input enhanced-input" required>
+                  <option value="">Devise</option>
+                  <option value="EUR">Euro (€)</option>
+                  <option value="USD">Dollar ($)</option>
+                  <option value="XAF">Franc CFA (XOF)</option>
+                  <option value="GBP">Livre (£)</option>
+                  <option value="CAD">Dollar canadien (CAD)</option>
+                  <option value="other">Autre</option>
+                </select>
+              </div>
+                </select>
+              </div>
+              <div class="form-row">
+                <textarea name="message" placeholder="Votre message" rows="5" required class="form-input enhanced-input"></textarea>
+              </div>
+              <div class="form-row">
+                <input type="file" name="file" accept=".pdf,.doc,.docx,.jpg,.png" class="form-input enhanced-input">
+              </div>
+              <div class="form-row">
+                <div class="form-info"><i class="fa-solid fa-lock"></i> Vos données ne seront jamais partagées. Confidentialité garantie.</div>
+              </div>
+              <button type="submit" class="btn enhanced-btn">Envoyer</button>
+            </form>
+            <div id="formSuccess" class="notification success" style="display:none;">Message envoyé avec succès !</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagements -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Pourquoi me faire confiance&nbsp;?</h2>
+        </div>
+        <div class="grid grid-2">
+          <div class="card"><i class="fa-solid fa-user-shield"></i> Confidentialité totale</div>
+          <div class="card"><i class="fa-solid fa-handshake"></i> Accompagnement personnalisé</div>
+          <div class="card"><i class="fa-solid fa-rocket"></i> Projets livrés dans les temps</div>
+          <div class="card"><i class="fa-solid fa-thumbs-up"></i> Satisfaction garantie</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mini FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">FAQ express</h2>
+        </div>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Quel est le délai de réponse&nbsp;?</h3>
+            <p>Je réponds à tous les messages sous 24h (jours ouvrés), souvent bien plus vite&nbsp;!</p>
+          </div>
+          <div class="card">
+            <h3>Mes données sont-elles en sécurité&nbsp;?</h3>
+            <p>Oui, confidentialité totale&nbsp;: aucune donnée n’est partagée, tout reste entre nous.</p>
+          </div>
+          <div class="card">
+            <h3>Puis-je demander un devis gratuit&nbsp;?</h3>
+            <p>Bien sûr&nbsp;! Chaque demande reçoit une réponse personnalisée et un devis sur-mesure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="footer-text">&copy; 2024 Sixx. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      // Dynamique : options de budget selon la devise
+      const budgetSelect = document.querySelector('select[name="budget"]');
+      const currencyRow = document.getElementById('currencyRow');
+      const currencySelect = document.getElementById('currencySelect');
+      const budgetOptions = {
+        EUR: [
+          { value: '500-1000', label: '500€ - 1000€' },
+          { value: '1000-2000', label: '1000€ - 2000€' },
+          { value: '2000-5000', label: '2000€ - 5000€' },
+          { value: '5000+', label: '5000€+' },
+          { value: 'a-discuter', label: 'À discuter' }
+        ],
+        USD: [
+          { value: '500-1000', label: '$500 - $1000' },
+          { value: '1000-2000', label: '$1000 - $2000' },
+          { value: '2000-5000', label: '$2000 - $5000' },
+          { value: '5000+', label: '$5000+' },
+          { value: 'a-discuter', label: 'To discuss' }
+        ],
+        XAF: [
+          { value: '50000-100000', label: '50.000 - 100.000 FCFA' },
+          { value: '100000-300000', label: '100.000 - 300.000 FCFA' },
+          { value: '300000-600000', label: '300.000 - 600.000 FCFA' },
+          { value: '600000-1200000', label: '600.000 - 1.200.000 FCFA' },
+          { value: '1200000+', label: '1.200.000 FCFA+' },
+          { value: 'a-discuter', label: 'À discuter' }
+        ],
+        GBP: [
+          { value: '500-1000', label: '£500 - £1000' },
+          { value: '1000-2000', label: '£1000 - £2000' },
+          { value: '2000-5000', label: '£2000 - £5000' },
+          { value: '5000+', label: '£5000+' },
+          { value: 'a-discuter', label: 'To discuss' }
+        ],
+        CAD: [
+          { value: '500-1000', label: '500$ CAD - 1000$ CAD' },
+          { value: '1000-2000', label: '1000$ CAD - 2000$ CAD' },
+          { value: '2000-5000', label: '2000$ CAD - 5000$ CAD' },
+          { value: '5000+', label: '5000$ CAD+' },
+          { value: 'a-discuter', label: 'À discuter' }
+        ],
+        other: [
+          { value: 'a-discuter', label: 'À discuter' }
+        ]
+      };
+      budgetSelect.addEventListener('focus', function() {
+        currencyRow.style.display = 'block';
+      });
+      currencySelect.addEventListener('change', function() {
+        const val = currencySelect.value;
+        budgetSelect.innerHTML = '<option value="">Budget</option>';
+        if(budgetOptions[val]) {
+          budgetOptions[val].forEach(opt => {
+            const option = document.createElement('option');
+            option.value = opt.value;
+            option.textContent = opt.label;
+            budgetSelect.appendChild(option);
+          });
+        }
+      });
+    </script>
+    <style>
+      /* Correction du style du select pour le type de projet */
+      select.enhanced-input {
+        background: rgba(60,60,120,0.95);
+        color: #fff;
+        border: 1px solid #6c63ff33;
+        border-radius: 1em;
+        padding: 0.9em 1.2em;
+        font-size: 1em;
+        outline: none;
+        appearance: none;
+        box-shadow: 0 2px 8px rgba(108,99,255,0.08);
+      }
+      select.enhanced-input option {
+        background: #23234a;
+        color: #fff;
+      }
+      /* Personnalisation supplémentaire pour la section contact direct */
+      .contact-direct {
+        border: 2px solid #6c63ff44;
+        background: linear-gradient(120deg, #23234a 60%, #6c63ff 100%);
+        position: relative;
+      }
+      .contact-direct::after {
+        content: '';
+        position: absolute;
+        top: -30px; left: -30px;
+        width: 80px; height: 80px;
+        background: radial-gradient(circle, #6c63ff55 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+      }
+      .contact-direct::before {
+        content: '';
+        position: absolute;
+        bottom: -30px; right: -30px;
+        width: 60px; height: 60px;
+        background: radial-gradient(circle, #3f3d56 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+      }
+      .contact-direct .contact-title {
+        color: #fff;
+        text-shadow: 0 2px 8px #6c63ff44;
+      }
+      .contact-direct .icon-bg {
+        border: 2px solid #fff2;
+      }
+      .enhanced-social {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+      .social-icon {
+        margin-bottom: 0.5em;
+        font-size: 1.7em;
+        background: linear-gradient(135deg, #fff 60%, #6c63ff 100%);
+        color: #6c63ff;
+        border-radius: 50%;
+        padding: 0.5em;
+        box-shadow: 0 2px 8px rgba(108,99,255,0.10);
+        transition: color 0.2s, background 0.2s, transform 0.2s;
+      }
+      .social-icon:hover {
+        color: #fff;
+        background: #6c63ff;
+        transform: scale(1.15) rotate(-8deg);
+      }
+      /* Améliorations visuelles pour les cards contact */
+      .enhanced-card {
+        background: linear-gradient(135deg, rgba(30,30,60,0.95) 60%, rgba(60,60,120,0.95) 100%);
+        box-shadow: 0 8px 32px rgba(30,30,60,0.18);
+        border-radius: 1.5em;
+        border: 1px solid rgba(80,80,160,0.12);
+        padding: 2.5em 2em;
+        transition: transform 0.2s, box-shadow 0.2s;
+        position: relative;
+        overflow: hidden;
+      }
+      .enhanced-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 16px 40px rgba(30,30,60,0.22);
+      }
+      .contact-title {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 1.2em;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        color: #6c63ff;
+      }
+      .contact-info {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5em 0;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 1em;
+        font-size: 1.1em;
+      }
+      .icon-bg {
+        background: linear-gradient(135deg, #6c63ff 60%, #3f3d56 100%);
+        color: #fff;
+        border-radius: 50%;
+        width: 2.5em;
+        height: 2.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+        box-shadow: 0 2px 8px rgba(108,99,255,0.15);
+        transition: background 0.2s;
+      }
+      .icon-bg.whatsapp { background: linear-gradient(135deg, #25d366 60%, #128c7e 100%); }
+      .icon-bg.phone { background: linear-gradient(135deg, #ff6c6c 60%, #3f3d56 100%); }
+      .copy-btn {
+        background: #6c63ff;
+        color: #fff;
+        border: none;
+        border-radius: 1em;
+        padding: 0.4em 1em;
+        font-size: 0.95em;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .copy-btn:hover {
+        background: #554ee6;
+      }
+      .enhanced-social {
+        display: flex;
+        gap: 1em;
+        margin-top: 1.5em;
+      }
+      .social-icon {
+        font-size: 1.5em;
+        color: #6c63ff;
+        background: rgba(108,99,255,0.08);
+        border-radius: 50%;
+        padding: 0.5em;
+        transition: color 0.2s, background 0.2s;
+      }
+      .social-icon:hover {
+        color: #fff;
+        background: #6c63ff;
+      }
+      .contact-form-card {
+        margin-top: 0;
+      }
+      .form-row {
+        display: flex;
+        gap: 1em;
+        margin-bottom: 1.2em;
+        flex-wrap: wrap;
+      }
+      .enhanced-input {
+        background: rgba(255,255,255,0.08);
+        border: 1px solid #6c63ff33;
+        border-radius: 1em;
+        padding: 0.9em 1.2em;
+        font-size: 1em;
+        color: #fff;
+        outline: none;
+        transition: border 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px rgba(108,99,255,0.08);
+      }
+      .enhanced-input:focus {
+        border: 1.5px solid #6c63ff;
+        box-shadow: 0 4px 16px rgba(108,99,255,0.15);
+      }
+      .form-info {
+        font-size: 0.95em;
+        color: #b3b3e6;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+      }
+      .enhanced-btn {
+        background: linear-gradient(135deg, #6c63ff 60%, #3f3d56 100%);
+        color: #fff;
+        border: none;
+        border-radius: 1em;
+        padding: 0.8em 2em;
+        font-size: 1.1em;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(108,99,255,0.12);
+        transition: background 0.2s, transform 0.2s;
+      }
+      .enhanced-btn:hover {
+        background: linear-gradient(135deg, #554ee6 60%, #6c63ff 100%);
+        transform: scale(1.04);
+      }
+      @media (max-width: 900px) {
+        .form-row { flex-direction: column; gap: 0.7em; }
+        .enhanced-card { padding: 1.2em 1em; }
+      }
+    </style>
+    <script>
+        // Forcer l'apparition des .fade-in si jamais le JS d'animation ne les gère pas
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.classList.add('visible');
+        });
+        // Formulaire avec feedback visuel
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            emailjs.init('TazJZurqyFEA7Vt7o');
+            emailjs.sendForm('service_6ho1euk', 'template_gddn8hw', contactForm)
+              .then(function() {
+                formSuccess.style.display = 'block';
+                setTimeout(()=>{formSuccess.style.display='none';}, 4000);
+                contactForm.reset();
+              }, function(error) {
+                alert('Erreur lors de l\'envoi du message.');
+              });
+        });
+    </script>
+    <script>
+        // Copier l'email au clic
+        const copyEmailBtn = document.getElementById('copyEmailBtn');
+        if(copyEmailBtn) {
+            copyEmailBtn.addEventListener('click', function() {
+                const email = document.getElementById('mainEmail').textContent;
+                navigator.clipboard.writeText(email);
+                copyEmailBtn.textContent = 'Copié !';
+                setTimeout(()=>{copyEmailBtn.textContent = 'Copier';}, 1500);
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+        });
+    </script>
+</body>
+</html> 

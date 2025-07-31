@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimiser les performances React : Guide complet 2024 - Blog ExamEase</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">ExamEase</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <div class="article-meta">
+                <span class="article-category">Performance</span>
+                <span class="article-date">20 Mars 2024</span>
+                <span class="article-read-time">8 min de lecture</span>
+            </div>
+            <h1 class="article-title">Optimiser les performances React : Guide complet 2024</h1>
+            <p class="article-subtitle">
+                Découvrez les techniques avancées pour améliorer les performances de vos applications React. 
+                De la virtualisation à la lazy loading, en passant par l'optimisation des re-renders, 
+                ce guide couvre tous les aspects essentiels pour des applications React ultra-performantes.
+            </p>
+            <div class="article-author">
+                <div class="author-avatar">
+                    <img src="https://via.placeholder.com/60x60/3b82f6/ffffff?text=EX" alt="ExamEase">
+                </div>
+                <div class="author-info">
+                    <h3>ExamEase</h3>
+                    <p>Développeur Full-Stack & Consultant</p>
+                </div>
+                <div class="article-share">
+                    <span>Partager :</span>
+                    <a href="#" class="share-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="share-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="share-link"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-content">
+        <div class="container">
+            <div class="article-layout">
+                <article class="article-main">
+                    <div class="article-image">
+                        <img src="https://via.placeholder.com/800x400/2563eb/ffffff?text=React+Performance" alt="React Performance">
+                    </div>
+                    
+                    <div class="article-body">
+                        <h2>Introduction</h2>
+                        <p>
+                            Les performances sont un aspect crucial de toute application web moderne. 
+                            Avec React, nous avons accès à de nombreux outils et techniques pour optimiser 
+                            nos applications. Dans ce guide complet, nous allons explorer les meilleures 
+                            pratiques pour améliorer les performances de vos applications React.
+                        </p>
+
+                        <h2>1. Comprendre les re-renders</h2>
+                        <p>
+                            Les re-renders sont l'une des principales causes de problèmes de performance 
+                            dans React. Un composant se re-render chaque fois que ses props ou son state changent.
+                        </p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Exemple de re-render problématique</span>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <pre><code class="language-javascript">
+// ❌ Problématique : re-render à chaque changement
+function ExpensiveComponent({ data }) {
+  const processedData = expensiveOperation(data);
+  
+  return (
+    <div>
+      {processedData.map(item => (
+        <div key={item.id}>{item.name}</div>
+      ))}
+    </div>
+  );
+}
+
+// ✅ Solution : utiliser useMemo
+function OptimizedComponent({ data }) {
+  const processedData = useMemo(() => {
+    return expensiveOperation(data);
+  }, [data]);
+  
+  return (
+    <div>
+      {processedData.map(item => (
+        <div key={item.id}>{item.name}</div>
+      ))}
+    </div>
+  );
+}
+                            </code></pre>
+                        </div>
+
+                        <h2>2. Optimisation avec React.memo</h2>
+                        <p>
+                            React.memo est un HOC (Higher Order Component) qui mémorise le résultat 
+                            du rendu d'un composant. Il évite les re-renders inutiles en comparant 
+                            les props précédentes avec les nouvelles.
+                        </p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Utilisation de React.memo</span>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <pre><code class="language-javascript">
+const ExpensiveComponent = React.memo(({ data, onItemClick }) => {
+  return (
+    <div>
+      {data.map(item => (
+        <div 
+          key={item.id} 
+          onClick={() => onItemClick(item.id)}
+        >
+          {item.name}
+        </div>
+      ))}
+    </div>
+  );
+});
+
+// Le composant ne se re-render que si data ou onItemClick changent
+                            </code></pre>
+                        </div>
+
+                        <h2>3. Lazy Loading et Code Splitting</h2>
+                        <p>
+                            Le lazy loading permet de charger les composants uniquement quand ils sont nécessaires, 
+                            réduisant ainsi le bundle initial et améliorant les temps de chargement.
+                        </p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Lazy Loading avec React.lazy</span>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <pre><code class="language-javascript">
+import React, { Suspense, lazy } from 'react';
+
+// Lazy loading d'un composant
+const ExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
+
+function App() {
+  return (
+    <div>
+      <Suspense fallback={<div>Chargement...</div>}>
+        <ExpensiveComponent />
+      </Suspense>
+    </div>
+  );
+}
+                            </code></pre>
+                        </div>
+
+                        <h2>4. Virtualisation pour les longues listes</h2>
+                        <p>
+                            Pour les listes contenant des milliers d'éléments, la virtualisation 
+                            est essentielle. Elle ne rend que les éléments visibles à l'écran.
+                        </p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Virtualisation avec react-window</span>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <pre><code class="language-javascript">
+import { FixedSizeList as List } from 'react-window';
+
+const Row = ({ index, style }) => (
+  <div style={style}>
+    Row {index}
+  </div>
+);
+
+function VirtualizedList({ items }) {
+  return (
+    <List
+      height={400}
+      itemCount={items.length}
+      itemSize={35}
+    >
+      {Row}
+    </List>
+  );
+}
+                            </code></pre>
+                        </div>
+
+                        <h2>5. Optimisation des images</h2>
+                        <p>
+                            Les images peuvent considérablement ralentir votre application. 
+                            Utilisez des formats modernes comme WebP et implémentez le lazy loading.
+                        </p>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Lazy loading d'images</span>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <pre><code class="language-javascript">
+import { useState, useEffect, useRef } from 'react';
+
+function LazyImage({ src, alt, placeholder }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={imgRef}>
+      {!isLoaded && <img src={placeholder} alt="placeholder" />}
+      {isInView && (
+        <img
+          src={src}
+          alt={alt}
+          onLoad={() => setIsLoaded(true)}
+          style={{ display: isLoaded ? 'block' : 'none' }}
+        />
+      )}
+    </div>
+  );
+}
+                            </code></pre>
+                        </div>
+
+                        <h2>6. Monitoring des performances</h2>
+                        <p>
+                            Surveillez les performances de votre application avec des outils 
+                            comme React DevTools Profiler et Lighthouse.
+                        </p>
+
+                        <div class="info-box">
+                            <h3>Outils recommandés</h3>
+                            <ul>
+                                <li><strong>React DevTools Profiler :</strong> Analysez les re-renders</li>
+                                <li><strong>Lighthouse :</strong> Auditez les performances globales</li>
+                                <li><strong>Web Vitals :</strong> Surveillez les métriques Core Web Vitals</li>
+                                <li><strong>Bundle Analyzer :</strong> Analysez la taille de votre bundle</li>
+                            </ul>
+                        </div>
+
+                        <h2>Conclusion</h2>
+                        <p>
+                            L'optimisation des performances React est un processus continu. 
+                            Commencez par identifier les goulots d'étranglement avec les outils 
+                            de profilage, puis appliquez les techniques appropriées. N'oubliez pas 
+                            que la prévention est toujours meilleure que la correction.
+                        </p>
+
+                        <div class="article-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Performance</span>
+                            <span class="tag">Optimisation</span>
+                            <span class="tag">Web Vitals</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="article-sidebar">
+                    <!-- Table of Contents -->
+                    <div class="sidebar-widget toc-widget">
+                        <h3 class="widget-title">Table des matières</h3>
+                        <ul class="toc-list">
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#re-renders">1. Comprendre les re-renders</a></li>
+                            <li><a href="#react-memo">2. Optimisation avec React.memo</a></li>
+                            <li><a href="#lazy-loading">3. Lazy Loading et Code Splitting</a></li>
+                            <li><a href="#virtualization">4. Virtualisation pour les longues listes</a></li>
+                            <li><a href="#images">5. Optimisation des images</a></li>
+                            <li><a href="#monitoring">6. Monitoring des performances</a></li>
+                            <li><a href="#conclusion">Conclusion</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Author Info -->
+                    <div class="sidebar-widget author-widget">
+                        <h3 class="widget-title">À propos de l'auteur</h3>
+                        <div class="author-card">
+                            <div class="author-avatar">
+                                <img src="https://via.placeholder.com/80x80/3b82f6/ffffff?text=EX" alt="ExamEase">
+                            </div>
+                            <div class="author-details">
+                                <h4>ExamEase</h4>
+                                <p>Développeur Full-Stack passionné par les performances web et les technologies modernes.</p>
+                                <div class="author-social">
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Posts -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Articles similaires</h3>
+                        <div class="related-posts">
+                            <article class="related-post">
+                                <div class="related-image">
+                                    <img src="https://via.placeholder.com/120x80/7c3aed/ffffff?text=React+Hooks" alt="React Hooks">
+                                </div>
+                                <div class="related-content">
+                                    <h4>Maîtriser les React Hooks</h4>
+                                    <span class="related-date">18 Mars 2024</span>
+                                </div>
+                            </article>
+                            <article class="related-post">
+                                <div class="related-image">
+                                    <img src="https://via.placeholder.com/120x80/059669/ffffff?text=TypeScript" alt="TypeScript">
+                                </div>
+                                <div class="related-content">
+                                    <h4>TypeScript pour débutants</h4>
+                                    <span class="related-date">8 Mars 2024</span>
+                                </div>
+                            </article>
+                            <article class="related-post">
+                                <div class="related-image">
+                                    <img src="https://via.placeholder.com/120x80/dc2626/ffffff?text=Web+Vitals" alt="Web Vitals">
+                                </div>
+                                <div class="related-content">
+                                    <h4>Optimiser le Core Web Vitals</h4>
+                                    <span class="related-date">10 Mars 2024</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget newsletter-widget">
+                        <h3 class="widget-title">Newsletter</h3>
+                        <p>Recevez les derniers articles et tutoriels directement dans votre boîte mail.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Votre email" required>
+                            <button type="submit" class="btn btn-primary">S'abonner</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <div class="container">
+            <div class="comments-header">
+                <h2>Commentaires (3)</h2>
+            </div>
+            <div class="comments-list">
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="https://via.placeholder.com/50x50/6b7280/ffffff?text=JD" alt="Jean Dupont">
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <h4>Jean Dupont</h4>
+                            <span class="comment-date">Il y a 2 jours</span>
+                        </div>
+                        <p>Excellent article ! J'ai particulièrement apprécié la section sur React.memo. Ça m'a aidé à optimiser mon application.</p>
+                        <div class="comment-actions">
+                            <button class="comment-reply">Répondre</button>
+                            <button class="comment-like"><i class="fas fa-thumbs-up"></i> 5</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="https://via.placeholder.com/50x50/6b7280/ffffff?text=MS" alt="Marie Smith">
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <h4>Marie Smith</h4>
+                            <span class="comment-date">Il y a 3 jours</span>
+                        </div>
+                        <p>Merci pour ce guide complet ! Avez-vous des conseils spécifiques pour l'optimisation des images dans Next.js ?</p>
+                        <div class="comment-actions">
+                            <button class="comment-reply">Répondre</button>
+                            <button class="comment-like"><i class="fas fa-thumbs-up"></i> 3</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="https://via.placeholder.com/50x50/6b7280/ffffff?text=PL" alt="Pierre Laurent">
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <h4>Pierre Laurent</h4>
+                            <span class="comment-date">Il y a 5 jours</span>
+                        </div>
+                        <p>Très utile ! J'utilise déjà react-window pour la virtualisation, mais je vais essayer les autres techniques mentionnées.</p>
+                        <div class="comment-actions">
+                            <button class="comment-reply">Répondre</button>
+                            <button class="comment-like"><i class="fas fa-thumbs-up"></i> 7</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-form">
+                <h3>Ajouter un commentaire</h3>
+                <form id="commentForm">
+                    <div class="form-group">
+                        <label for="commentName">Nom *</label>
+                        <input type="text" id="commentName" name="commentName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="commentEmail">Email *</label>
+                        <input type="email" id="commentEmail" name="commentEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="commentMessage">Commentaire *</label>
+                        <textarea id="commentMessage" name="commentMessage" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Publier le commentaire</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">ExamEase</span>
+                    </div>
+                    <p>Créateur d'expériences digitales exceptionnelles. Transformons vos idées en réalité.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Développement Web</a></li>
+                        <li><a href="services.html">Applications Mobile</a></li>
+                        <li><a href="services.html">Backend & API</a></li>
+                        <li><a href="services.html">Cloud & DevOps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@examease.dev">contact@examease.dev</a></li>
+                        <li><a href="tel:+33612345678">+33 6 12 34 56 78</a></li>
+                        <li><a href="contact.html">Formulaire de contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ExamEase. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Politique de confidentialité</a>
+                    <a href="terms.html">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

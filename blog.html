@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - ExamEase</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">ExamEase</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Blog</h1>
+            <p class="page-subtitle">Insights, tutoriels et actualités du développement web</p>
+        </div>
+    </section>
+
+    <!-- Blog Search & Filters -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="blog-search">
+                <div class="search-box">
+                    <input type="text" placeholder="Rechercher un article..." id="blogSearch">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="blog-categories">
+                <button class="category-btn active" data-category="all">Tous</button>
+                <button class="category-btn" data-category="react">React</button>
+                <button class="category-btn" data-category="nodejs">Node.js</button>
+                <button class="category-btn" data-category="design">Design</button>
+                <button class="category-btn" data-category="performance">Performance</button>
+                <button class="category-btn" data-category="tutorial">Tutoriels</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div class="container">
+            <article class="featured-post">
+                <div class="featured-image">
+                    <img src="https://via.placeholder.com/800x400/2563eb/ffffff?text=React+Performance" alt="React Performance">
+                    <div class="featured-badge">Article à la une</div>
+                </div>
+                <div class="featured-content">
+                    <div class="post-meta">
+                        <span class="post-category">Performance</span>
+                        <span class="post-date">20 Mars 2024</span>
+                        <span class="post-read-time">8 min de lecture</span>
+                    </div>
+                    <h2 class="post-title">Optimiser les performances React : Guide complet 2024</h2>
+                    <p class="post-excerpt">
+                        Découvrez les techniques avancées pour améliorer les performances de vos applications React. 
+                        De la virtualisation à la lazy loading, en passant par l'optimisation des re-renders, 
+                        ce guide couvre tous les aspects essentiels pour des applications React ultra-performantes.
+                    </p>
+                    <div class="post-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Performance</span>
+                        <span class="tag">Optimisation</span>
+                        <span class="tag">Web Vitals</span>
+                    </div>
+                    <a href="blog-post.html" class="read-more">Lire l'article complet <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-layout">
+                <div class="blog-main">
+                    <div class="blog-grid">
+                        <!-- Article 1 -->
+                        <article class="blog-card" data-category="react tutorial">
+                            <div class="blog-image">
+                                <img src="https://via.placeholder.com/400x250/7c3aed/ffffff?text=React+Hooks" alt="React Hooks">
+                            </div>
+                            <div class="blog-content">
+                                <div class="post-meta">
+                                    <span class="post-category">React</span>
+                                    <span class="post-date">18 Mars 2024</span>
+                                    <span class="post-read-time">6 min</span>
+                                </div>
+                                <h3 class="post-title">Maîtriser les React Hooks : Guide pratique</h3>
+                                <p class="post-excerpt">
+                                    Un guide complet sur l'utilisation des React Hooks pour créer des composants 
+                                    fonctionnels puissants et réutilisables...
+                                </p>
+                                <div class="post-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">Hooks</span>
+                                    <span class="tag">Tutoriel</span>
+                                </div>
+                                <a href="blog-post.html" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="blog-card" data-category="nodejs performance">
+                            <div class="blog-image">
+                                <img src="https://via.placeholder.com/400x250/059669/ffffff?text=Node.js+Architecture" alt="Node.js Architecture">
+                            </div>
+                            <div class="blog-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Node.js</span>
+                                    <span class="post-date">15 Mars 2024</span>
+                                    <span class="post-read-time">10 min</span>
+                                </div>
+                                <h3 class="post-title">Architecture microservices avec Node.js</h3>
+                                <p class="post-excerpt">
+                                    Guide complet pour construire des applications scalables avec une architecture 
+                                    microservices moderne...
+                                </p>
+                                <div class="post-tags">
+                                    <span class="tag">Node.js</span>
+                                    <span class="tag">Microservices</span>
+                                    <span class="tag">Architecture</span>
+                                </div>
+                                <a href="blog-post.html" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 3 -->
+                        <article class="blog-card" data-category="design">
+                            <div class="blog-image">
+                                <img src="https://via.placeholder.com/400x250/dc2626/ffffff?text=UI+Design" alt="UI Design">
+                            </div>
+                            <div class="blog-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Design</span>
+                                    <span class="post-date">12 Mars 2024</span>
+                                    <span class="post-read-time">7 min</span>
+                                </div>
+                                <h3 class="post-title">Principes de design moderne pour 2024</h3>
+                                <p class="post-excerpt">
+                                    Les tendances et principes fondamentaux du design d'interface utilisateur 
+                                    pour créer des expériences mémorables...
+                                </p>
+                                <div class="post-tags">
+                                    <span class="tag">Design</span>
+                                    <span class="tag">UI/UX</span>
+                                    <span class="tag">Tendances</span>
+                                </div>
+                                <a href="blog-post.html" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 4 -->
+                        <article class="blog-card" data-category="performance">
+                            <div class="blog-image">
+                                <img src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=Web+Performance" alt="Web Performance">
+                            </div>
+                            <div class="blog-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Performance</span>
+                                    <span class="post-date">10 Mars 2024</span>
+                                    <span class="post-read-time">9 min</span>
+                                </div>
+                                <h3 class="post-title">Optimiser le Core Web Vitals</h3>
+                                <p class="post-excerpt">
+                                    Techniques avancées pour améliorer les métriques Core Web Vitals et 
+                                    optimiser l'expérience utilisateur...
+                                </p>
+                                <div class="post-tags">
+                                    <span class="tag">Performance</span>
+                                    <span class="tag">Core Web Vitals</span>
+                                    <span class="tag">SEO</span>
+                                </div>
+                                <a href="blog-post.html" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 5 -->
+                        <article class="blog-card" data-category="tutorial">
+                            <div class="blog-image">
+                                <img src="https://via.placeholder.com/400x250/ef4444/ffffff?text=TypeScript" alt="TypeScript">
+                            </div>
+                            <div class="blog-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Tutoriel</span>
+                                    <span class="post-date">8 Mars 2024</span>
+                                    <span class="post-read-time">12 min</span>
+                                </div>
+                                <h3 class="post-title">TypeScript pour débutants : Guide complet</h3>
+                                <p class="post-excerpt">
+                                    Apprenez TypeScript de zéro avec ce guide étape par étape. 
+                                    De la configuration à l'utilisation avancée...
+                                </p>
+                                <div class="post-tags">
+                                    <span class="tag">TypeScript</span>
+                                    <span class="tag">Tutoriel</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                                <a href="blog-post.html" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 6 -->
+                        <article class="blog-card" data-category="nodejs">
+                            <div class="blog-image">
+                                <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=API+Design" alt="API Design">
+                            </div>
+                            <div class="blog-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Node.js</span>
+                                    <span class="post-date">5 Mars 2024</span>
+                                    <span class="post-read-time">8 min</span>
+                                </div>
+                                <h3 class="post-title">Concevoir des APIs RESTful avec Express</h3>
+                                <p class="post-excerpt">
+                                    Bonnes pratiques pour concevoir des APIs RESTful robustes et 
+                                    maintenables avec Express.js...
+                                </p>
+                                <div class="post-tags">
+                                    <span class="tag">Node.js</span>
+                                    <span class="tag">Express</span>
+                                    <span class="tag">API</span>
+                                </div>
+                                <a href="blog-post.html" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="blog-pagination">
+                        <button class="pagination-btn prev" disabled><i class="fas fa-chevron-left"></i> Précédent</button>
+                        <div class="pagination-numbers">
+                            <span class="page-number active">1</span>
+                            <span class="page-number">2</span>
+                            <span class="page-number">3</span>
+                            <span class="page-dots">...</span>
+                            <span class="page-number">8</span>
+                        </div>
+                        <button class="pagination-btn next">Suivant <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Popular Posts -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Articles populaires</h3>
+                        <div class="popular-posts">
+                            <article class="popular-post">
+                                <div class="popular-image">
+                                    <img src="https://via.placeholder.com/80x60/2563eb/ffffff?text=1" alt="Popular Post 1">
+                                </div>
+                                <div class="popular-content">
+                                    <h4>Les 10 erreurs React les plus courantes</h4>
+                                    <span class="popular-date">15 Mars 2024</span>
+                                </div>
+                            </article>
+                            <article class="popular-post">
+                                <div class="popular-image">
+                                    <img src="https://via.placeholder.com/80x60/7c3aed/ffffff?text=2" alt="Popular Post 2">
+                                </div>
+                                <div class="popular-content">
+                                    <h4>Guide complet du SEO technique</h4>
+                                    <span class="popular-date">12 Mars 2024</span>
+                                </div>
+                            </article>
+                            <article class="popular-post">
+                                <div class="popular-image">
+                                    <img src="https://via.placeholder.com/80x60/059669/ffffff?text=3" alt="Popular Post 3">
+                                </div>
+                                <div class="popular-content">
+                                    <h4>Docker pour les développeurs web</h4>
+                                    <span class="popular-date">10 Mars 2024</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Catégories</h3>
+                        <ul class="category-list">
+                            <li><a href="#" data-category="react">React <span class="category-count">12</span></a></li>
+                            <li><a href="#" data-category="nodejs">Node.js <span class="category-count">8</span></a></li>
+                            <li><a href="#" data-category="design">Design <span class="category-count">6</span></a></li>
+                            <li><a href="#" data-category="performance">Performance <span class="category-count">5</span></a></li>
+                            <li><a href="#" data-category="tutorial">Tutoriels <span class="category-count">15</span></a></li>
+                            <li><a href="#" data-category="tools">Outils <span class="category-count">4</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Tags</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag-link">React</a>
+                            <a href="#" class="tag-link">Node.js</a>
+                            <a href="#" class="tag-link">TypeScript</a>
+                            <a href="#" class="tag-link">Performance</a>
+                            <a href="#" class="tag-link">API</a>
+                            <a href="#" class="tag-link">Design</a>
+                            <a href="#" class="tag-link">SEO</a>
+                            <a href="#" class="tag-link">Docker</a>
+                            <a href="#" class="tag-link">AWS</a>
+                            <a href="#" class="tag-link">Testing</a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget newsletter-widget">
+                        <h3 class="widget-title">Newsletter</h3>
+                        <p>Recevez les derniers articles et tutoriels directement dans votre boîte mail.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Votre email" required>
+                            <button type="submit" class="btn btn-primary">S'abonner</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Restez informé</h2>
+                <p>Recevez les derniers articles, tutoriels et actualités du développement web directement dans votre boîte mail.</p>
+                <form class="newsletter-form-large">
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Votre email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">S'abonner à la newsletter</button>
+                </form>
+                <p class="newsletter-note">Pas de spam, désabonnement en un clic.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">ExamEase</span>
+                    </div>
+                    <p>Créateur d'expériences digitales exceptionnelles. Transformons vos idées en réalité.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Développement Web</a></li>
+                        <li><a href="services.html">Applications Mobile</a></li>
+                        <li><a href="services.html">Backend & API</a></li>
+                        <li><a href="services.html">Cloud & DevOps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@examease.dev">contact@examease.dev</a></li>
+                        <li><a href="tel:+33612345678">+33 6 12 34 56 78</a></li>
+                        <li><a href="contact.html">Formulaire de contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ExamEase. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Politique de confidentialité</a>
+                    <a href="terms.html">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

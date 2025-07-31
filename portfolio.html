@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Sixx</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Background Animations -->
+    <div class="background-animation">
+        <div class="geometric-flow"></div>
+        <div class="grid-animation"></div>
+        <div class="energy-flow"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <div class="logo-six">6</div>
+                <div class="logo-text">Sixx</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mon <span class="typing-text">Portfolio</span></h1>
+            <p>Découvrez mes réalisations et projets personnels</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filters -->
+    <section class="section">
+        <div class="container">
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="web">Sites Web</button>
+                <button class="filter-btn" data-filter="app">Applications</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-3">
+                <!-- MyLib – Gestion de bibliothèque -->
+                <div class="project-card hover-3d" data-category="app">
+                    <div class="project-image" style="background-image:url('assets/Docflow.jpg');background-size:cover;"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">MyLib – Gestion de bibliothèque</h3>
+                        <p class="project-description">Application desktop pour gérer une bibliothèque (livres, emprunts, utilisateurs) avec interface CRUD, recherche dynamique et gestion MySQL.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Qt Widgets</span>
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                        <div class="project-meta">Rôle : Dev fullstack</div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-secondary">Voir mockups</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Système de gestion documentaire -->
+                <div class="project-card hover-3d" data-category="app">
+                    <div class="project-image" style="background-image:url('assets/mohammad-rahmani-8qEB0fTe9Vw-unsplash.jpg');background-size:cover;"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Système de gestion documentaire</h3>
+                        <p class="project-description">Application pro pour organiser, retrouver et consulter des fichiers numériques avec catégories et mots-clés. Interface claire, tri intelligent, performance.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">Qt</span>
+                        </div>
+                        <div class="project-meta">Rôle : Développeur principal</div>
+                    </div>
+                </div>
+                <!-- Kontakto – Gestion de contacts -->
+                <div class="project-card hover-3d" data-category="app">
+                    <div class="project-image" style="background-image:url('assets/profile.png');background-size:cover;"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Kontakto – Gestion de contacts</h3>
+                        <p class="project-description">Mini app Laravel pour ajouter, modifier et organiser des contacts facilement. CRUD complet, responsive design.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">Bootstrap</span>
+                            <span class="project-tag">Laragib</span>
+                        </div>
+                        <div class="project-meta">Rôle : Backend & Frontend</div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-secondary">Lien / Démo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plateforme de vente de voitures -->
+                <div class="project-card hover-3d" data-category="web">
+                    <div class="project-image" style="background-image:url('assets/christopher-gower-m_HRfLhgABo-unsplash.jpg');background-size:cover;"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Plateforme de vente de voitures</h3>
+                        <p class="project-description">Site web dynamique pour achat/vente de voitures : galerie, carousel, formulaire connecté à la base de données, confirmation, UX fluide.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JS</span>
+                            <span class="project-tag">PHP</span>
+                        </div>
+                        <div class="project-meta">Rôle : Frontend & coordination backend</div>
+                    </div>
+                </div>
+                <!-- AzzyDev – Portfolio stylisé -->
+                <div class="project-card hover-3d" data-category="web">
+                    <div class="project-image" style="background-image:url('assets/meeee.png');background-size:cover;"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">AzzyDev – Mon portfolio stylisé</h3>
+                        <p class="project-description">Site vitrine personnel moderne, pages dynamiques, design responsive, animations douces. Accueil, À propos, galerie de projets.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">Vite</span>
+                            <span class="project-tag">Tailwind CSS</span>
+                        </div>
+                        <div class="project-meta">Rôle : Web designer & fullstack</div>
+                    </div>
+                </div>
+                <!-- Application d’examen sécurisé -->
+                <div class="project-card hover-3d" data-category="app">
+                    <div class="project-image" style="background-image:url('assets/MOI.jpg');background-size:cover;"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Application d’examen sécurisé</h3>
+                        <p class="project-description">Concept d’application mobile + système web pour sécuriser les examens (gestion sujets, sessions, accès, outils de contrôle).</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter ?</span>
+                            <span class="project-tag">Laravel ?</span>
+                            <span class="project-tag">Node ?</span>
+                        </div>
+                        <div class="project-meta">Rôle : Concepteur, développeur & architecte</div>
+                    </div>
+                </div>
+                <!-- Projet VB.NET – MySetup -->
+                <div class="project-card hover-3d" data-category="app">
+                    <div class="project-image" style="background-image:url('assets/laptop-code.jpg');background-size:cover;"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Projet VB.NET – MySetup</h3>
+                        <p class="project-description">Application Windows installable avec authentification, calculatrice, espace admin (CRUD utilisateurs), base MySQL.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">VB.NET</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Visual Studio</span>
+                            <span class="project-tag">Inno Setup</span>
+                        </div>
+                        <div class="project-meta">Rôle : Développeur fullstack</div>
+                    </div>
+                </div>
+                <!-- Services de rédaction & traduction -->
+                <div class="project-card hover-3d" data-category="web">
+                    <div class="project-image" style="background-image:url('assets/profile.png');background-size:cover;"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Services de rédaction & traduction</h3>
+                        <p class="project-description">Prestations freelance : articles de blog, traductions, contenus web. Style naturel, fluide, respect du ton. Plateformes : Fiverr, WhatsApp, missions directes.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">FR ↔ EN</span>
+                            <span class="project-tag">Blog</span>
+                            <span class="project-tag">Traduction</span>
+                        </div>
+                        <div class="project-meta">Rôle : Rédacteur & traducteur freelance</div>
+                    </div>
+                </div>
+                <!-- Projets historiques (exemples) -->
+                <div class="project-card hover-3d" data-category="web">
+                    <div class="project-image" style="background-image:url('assets/christopher-gower-m_HRfLhgABo-unsplash.jpg');background-size:cover;"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce Moderne</h3>
+                        <p class="project-description">Plateforme e-commerce complète avec panier, paiements et gestion admin.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Stripe</span>
+                        </div>
+                        <div class="project-meta">Rôle : Fullstack</div>
+                    </div>
+                </div>
+                <div class="project-card hover-3d" data-category="app">
+                    <div class="project-image" style="background-image:url('assets/mohammad-rahmani-8qEB0fTe9Vw-unsplash.jpg');background-size:cover;"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dashboard Analytics</h3>
+                        <p class="project-description">Tableau de bord avec visualisations de données et rapports personnalisés.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Chart.js</span>
+                            <span class="project-tag">API REST</span>
+                        </div>
+                        <div class="project-meta">Rôle : Frontend</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Chiffres Clés</h2>
+                <p class="section-subtitle">Quelques statistiques de mes projets</p>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number counter" data-target="25">0</div>
+                    <div class="stat-label">Projets réalisés</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number counter" data-target="15">0</div>
+                    <div class="stat-label">Clients satisfaits</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number counter" data-target="3">0</div>
+                    <div class="stat-label">Années d'expérience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="card text-center">
+                <h2>Vous aimez ce que vous voyez ?</h2>
+                <p>Discutons de votre projet et créons quelque chose d'extraordinaire ensemble</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn magnetic">Démarrer un projet</a>
+                    <a href="services.html" class="btn btn-secondary magnetic">Voir mes services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="about.html">À propos</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+            </div>
+            <p class="footer-text">&copy; 2024 Sixx. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Masquer l'écran de chargement après le chargement
+      window.addEventListener('load', function() {
+        const loading = document.querySelector('.loading');
+        if(loading) loading.style.display = 'none';
+      });
+    </script>
+    <style>
+      /* Responsive grid portfolio */
+      .grid.grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+      }
+      @media (max-width: 1100px) {
+        .grid.grid-3 { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 700px) {
+        .grid.grid-3 { grid-template-columns: 1fr; }
+        .project-card { margin-bottom: 2em; }
+      }
+      .project-card {
+        min-width: 0;
+        border-radius: 1.2em;
+        overflow: hidden;
+        box-shadow: 0 4px 24px rgba(30,30,60,0.10);
+        background: #23234a;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .project-card:hover {
+        box-shadow: 0 8px 32px #6c63ff33;
+        transform: scale(1.03);
+      }
+      .project-image {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 1.2em 1.2em 0 0;
+      }
+      .project-content {
+        padding: 1.2em;
+      }
+      .project-title { font-size: 1.2em; font-weight: 700; margin-bottom: 0.5em; }
+      .project-description { font-size: 1em; margin-bottom: 0.7em; }
+      .project-tags { display: flex; flex-wrap: wrap; gap: 0.5em; margin-bottom: 0.7em; }
+      .project-tag { background: #6c63ff22; color: #6c63ff; border-radius: 0.7em; padding: 0.2em 0.8em; font-size: 0.95em; }
+      .project-meta { font-size: 0.95em; color: #b3b3e6; margin-bottom: 0.7em; }
+      .project-links { margin-top: 0.7em; }
+      .btn.btn-secondary { background: #6c63ff; color: #fff; border-radius: 1em; padding: 0.5em 1.2em; border: none; cursor: pointer; transition: background 0.2s; }
+      .btn.btn-secondary:hover { background: #554ee6; }
+      /* Responsive stats */
+      .stats { display: flex; gap: 2em; justify-content: center; margin-top: 2em; }
+      .stat { background: #23234a; border-radius: 1em; padding: 1.2em 2em; text-align: center; box-shadow: 0 2px 12px #6c63ff22; }
+      .stat-number { font-size: 2.2em; font-weight: 700; color: #6c63ff; }
+      .stat-label { font-size: 1em; color: #b3b3e6; }
+      @media (max-width: 700px) {
+        .stats { flex-direction: column; gap: 1em; }
+        .stat { padding: 1em; }
+      }
+      /* Responsive section header */
+      .section-header { text-align: center; margin-bottom: 2em; }
+      .section-title { font-size: 2em; font-weight: 700; color: #6c63ff; }
+      .section-subtitle { font-size: 1.1em; color: #b3b3e6; }
+      /* Responsive card CTA */
+      .card.text-center { border-radius: 1.2em; background: #23234a; box-shadow: 0 2px 12px #6c63ff22; padding: 2em; margin-top: 2em; }
+      @media (max-width: 700px) {
+        .card.text-center { padding: 1em; }
+      }
+    </style>
+    <script>
+        // Portfolio filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        gsap.to(card, {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.5,
+                            ease: "power2.out"
+                        });
+                    } else {
+                        gsap.to(card, {
+                            opacity: 0,
+                            scale: 0.8,
+                            duration: 0.3,
+                            ease: "power2.in",
+                            onComplete: () => {
+                                card.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

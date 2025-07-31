@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Sixx</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Background Animations -->
+    <div class="background-animation">
+        <div class="geometric-flow"></div>
+        <div class="grid-animation"></div>
+        <div class="energy-flow"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <div class="logo-six">6</div>
+                <div class="logo-text">Sixx</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html" class="active">À propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>À propos de <span class="typing-text">Sixx</span></h1>
+            <p>Découvrez mon parcours, ma passion pour le code et ma vision du développement web</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2">
+                <div class="card">
+                    <h2>Mon Parcours</h2>
+                    <p>Passionné par la technologie depuis l'adolescence, j'ai découvert le développement web très tôt. Mais par manque d'informations et de connaissances je ne me suis lancé réellement qu'en 2021 et ai commencé mes études supérieures en 2023. Ce qui était au départ une curiosité est devenu une passion, une passion devenue dévorante.</p>
+                    <p>Autodidacte dans l'âme, j'ai appris le développement en partie en cours, mais aussi, en pratiquant intensivement, en suivant des tutoriels en ligne et en participant à des projets open source. Cette approche m'a permis de développer une compréhension profonde des technologies web modernes.</p>
+                    <p>Aujourd'hui, quoique toujours en formation, je combine créativité et rigueur technique pour créer des applications web qui allient esthétique moderne et performance optimale.</p>
+                </div>
+                <div class="card">
+                    <h2>Ma Philosophie</h2>
+                    <p>Je crois que le développement web doit être à la fois artistique et technique. Chaque projet est une opportunité d'apprendre et de créer quelque chose d'unique.</p>
+                    <p>Mon approche se base sur trois principes fondamentaux :</p>
+                    <ul>
+                        <li><strong>Innovation</strong> : Explorer les nouvelles technologies et tendances</li>
+                        <li><strong>Qualité</strong> : Code propre, maintenable et bien documenté</li>
+                        <li><strong>Expérience</strong> : Interfaces intuitives et expériences utilisateur fluides</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compétences Techniques</h2>
+                <p class="section-subtitle">Technologies et outils que je maîtrise</p>
+            </div>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Frontend</h3>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 67%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Next.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Backend & Outils</h3>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 68%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PHP/MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 52%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Expérience & Projets</h2>
+                <p class="section-subtitle">Mon parcours dans le développement</p>
+            </div>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Développeur Freelance</h3>
+                    <p class="company">Sixx • 2023 - Présent</p>
+                    <p>Développement d'applications web sur mesure pour des clients variés. Gestion complète des projets, de la conception à la mise en production.</p>
+                    <ul>
+                        <li>Applications de e-commerce</li>
+                        <li>Sites vitrines modernes</li>
+                        <li>Outils de gestion</li>
+                        <li>Maintenance et support</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Projets Personnels</h3>
+                    <p class="company">Portfolio • 2021 - Présent</p>
+                    <p>Développement de projets personnels pour explorer de nouvelles technologies, apprendre et améliorer mes compétences.</p>
+                    <ul>
+                        <li>Applications React/Node.js</li>
+                        <li>Expérimentations UI/UX</li>
+                        <li>Contributions open source</li>
+                        <li>Veille technologique</li>
+                        <li>Frameworks Next.Js & Angular.Js</li>
+                        <li>Cursus supérieur linguistique option: <strong>Anglais</strong></li>
+                        <li>Cursus supérieur informatique option: <strong>Systèmes Informatiques et Logiciels</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Valeurs</h2>
+                <p class="section-subtitle">Ce qui guide mon travail</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card hover-3d">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>Chaque projet est une opportunité de créer quelque chose d'exceptionnel. Je m'efforce de livrer un travail de qualité qui dépasse les attentes.</p>
+                </div>
+                <div class="card hover-3d">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>Je crois en la puissance du travail d'équipe et de la communication ouverte. Chaque projet est une collaboration avec le client.</p>
+                </div>
+                <div class="card hover-3d">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                        </svg>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Je reste constamment à l'affût des nouvelles technologies et tendances pour proposer des solutions modernes et innovantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section class="section" id="cv">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mon CV</h2>
+                <p class="section-subtitle">Parcours, compétences et plus</p>
+            </div>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Etat Civil</h3>
+                    <ul style="margin-bottom: 1rem;">
+                        <li><strong>Nom :</strong> DIMON</li>
+                        <li><strong>Prénoms :</strong> Charbel Ibukun Phanel</li>
+                        <li><strong>Sexe :</strong> Masculin</li>
+                    </ul>
+                    <h3>Contact</h3>
+                    <ul style="margin-bottom: 1rem;">
+                        <li><strong>Téléphone :</strong> +229 01 51 08 28 26</li>
+                        <li><strong>Email :</strong> pdreck06@gmail.com</li>
+                        <li><strong>Adresse :</strong> Albarika, Parakou, R.B.</li>
+                    </ul>
+                    <h3>À propos de moi</h3>
+                    <p>Étudiant en deuxième année de Systèmes Informatiques et Logiciels, passionné par la technologie et la création de contenus. Développeur en devenir, j’ai une poignée de connaissances dans la matière. Curieux et polyvalent, j’aime apprendre, partager et relever de nouveaux défis.</p>
+                </div>
+                <div class="card">
+                    <h3>Formation</h3>
+                    <ul>
+                        <li>Certificat d’Etudes Primaires (CEP) | CSP ‘’DEO-GRATIAS ‘’ <br><span class="cv-date">2016</span></li>
+                        <li>Brevet d’Etudes du Premier Cycle (BEPC) | Collège Catholique ‘’Les HIBISCUS 1er Cycle ‘’ <br><span class="cv-date">2016-2020</span></li>
+                        <li>Baccalauréat (BAC) | Collège Catholique ‘’Les HIBISCUS 2nd Cycle ‘’ <br><span class="cv-date">2020-2023</span></li>
+                        <li>Licence en Systèmes Informatiques et Logiciels & ANGLAIS | Institut Universitaire ‘’LES COURS SONOU’’ & FLLAC-UAC <br><span class="cv-date">2023-A CE JOUR</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-3" style="margin-top: 2rem;">
+                <div class="card">
+                    <h3>Compétences</h3>
+                    <ul class="cv-skills">
+                        <li>HTML5 <span class="cv-skill-bar" style="width: 80%;">4/5</span></li>
+                        <li>CSS3 <span class="cv-skill-bar" style="width: 70%;">3,5/5</span></li>
+                        <li>JavaScript <span class="cv-skill-bar" style="width: 54%;">2,7/5</span></li>
+                        <li>ReactJS <span class="cv-skill-bar" style="width: 54%;">2,7/5</span></li>
+                        <li>PHP/MySQL <span class="cv-skill-bar" style="width: 54%;">2,7/5</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Langues</h3>
+                    <ul>
+                        <li>Français</li>
+                        <li>Anglais</li>
+                        <li>Fon</li>
+                        <li>Mina</li>
+                    </ul>
+                    <h3>Hobbies</h3>
+                    <ul>
+                        <li>Programmation</li>
+                        <li>Lecture</li>
+                        <li>Traduction</li>
+                        <li>Rédaction web</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Qualités</h3>
+                    <ul>
+                        <li>Créativité</li>
+                        <li>Compétences en leadership</li>
+                        <li>Organisation</li>
+                        <li>Travail d’équipe</li>
+                        <li>Sens du relationnel</li>
+                        <li>Ouverture d’esprit</li>
+                        <li>Ponctualité</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Projets</h3>
+                <ul>
+                    <li>Réalisation d’un portfolio</li>
+                    <li>Traduction (sur Upwork)</li>
+                    <li>Rédaction web (sur Upwork)</li>
+                    <li>Projets scolaires divers (programmation de microcontrôleurs...)</li>
+                </ul>
+            </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="assets/CV PHANEL.pdf" class="btn" download>Télécharger mon CV en PDF</a>
+            </div>
+        </div>
+    </section>
+    <!-- Fin CV Section -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="footer-text">&copy; 2024 Sixx. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

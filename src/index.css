@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-cyber-dark text-white font-cyber;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  }
+}
+
+@layer components {
+  .neon-text {
+    @apply text-neon-pink;
+    text-shadow: 0 0 10px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080;
+  }
+  
+  .neon-border {
+    @apply border-neon-pink;
+    box-shadow: 0 0 10px #ff0080, inset 0 0 10px rgba(255, 0, 128, 0.1);
+  }
+  
+  .cyber-card {
+    @apply bg-cyber-gray border border-cyber-light rounded-lg p-6;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .glitch {
+    position: relative;
+  }
+  
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .glitch::before {
+    animation: glitch-1 2s infinite linear alternate-reverse;
+    color: #ff0080;
+    z-index: -1;
+  }
+  
+  .glitch::after {
+    animation: glitch-2 3s infinite linear alternate-reverse;
+    color: #00ffff;
+    z-index: -2;
+  }
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(2px, 2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(-2px, 2px); }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cyber-darker;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neon-pink rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neon-purple;
+} 

@@ -728,17 +728,169 @@
         <div class="hero-container">
             <div class="hero-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;padding:32px 12px;max-width:600px;margin:0 auto;">
                 <div class="hero-image" style="width:100%;display:flex;justify-content:center;">
-                    <div class="laptop-container" style="width:260px;height:180px;">
-                        <div class="laptop-device" style="width:100%;height:100%;">
-                            <div class="laptop-screen" style="width:180px;height:110px;background:#222;border-radius:12px 12px 0 0;border:2px solid #333;overflow:hidden;box-shadow:0 6px 24px #6366f1;display:flex;align-items:center;justify-content:center;">
-                                <div class="screen-content" style="font-size:19px;color:#96ceb4;text-align:center;font-family:'Inter',sans-serif;">Bienvenue sur mon portfolio !</div>
+                    <div class="laptop-container">
+                        <div class="laptop-glow"></div>
+                        <div class="laptop-device">
+                            <div class="laptop-screen">
+                                <div class="screen-glow"></div>
+                                <div class="screen-content" id="animated-terminal">
+                                    <span class="code-line"><span class="code-keyword">$</span> <span class="code-function">npm run start</span></span>
+                                    <span class="code-line indent-1 code-comment"># Portfolio Sixx en cours de lancement...</span>
+                                    <span class="code-line"><span class="code-keyword">Bienvenue</span> <span class="code-string">sur mon portfolio !</span></span>
+                                    <span class="code-line indent-1 code-variable">Créatif digital, rédacteur bilingue, traducteur et développeur freelance.</span>
+                                    <span class="code-line indent-1 code-keyword">Je donne vie à tes idées sur le web !</span>
+                                </div>
                             </div>
-                            <div class="laptop-base" style="width:160px;height:12px;background:#333;border-radius:0 0 12px 12px;border:2px solid #333;border-top:none;margin:0 auto;"></div>
+                            <div class="laptop-base"></div>
+                        </div>
+                        <div class="floating-elements">
+                            <span class="floating-element element-1">
+                              <!-- Ampoule (Lightbulb) -->
+                              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 1 7 7c0 3.5-2.5 6.5-5 7v2a2 2 0 0 1-4 0v-2c-2.5-0.5-5-3.5-5-7a7 7 0 0 1 7-7z"/></svg>
+                            </span>
+                            <span class="floating-element element-2">
+                              <!-- Ordinateur (Monitor) -->
+                              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </span>
+                            <span class="floating-element element-3">
+                              <!-- Fusée (Rocket) -->
+                              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 8-8v0a8 8 0 0 1 8 8v0c0 4.418-3.582 8-8 8v0c-4.418 0-8-3.582-8-8v0z"/><path d="M12 3v13"/><path d="M9 16h6"/></svg>
+                            </span>
+                            <span class="floating-element element-4">
+                              <!-- Palette (Palette) -->
+                              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="7" cy="10" r="1"/><circle cx="12" cy="7" r="1"/><circle cx="17" cy="10" r="1"/><circle cx="12" cy="17" r="1"/></svg>
+                            </span>
                         </div>
                     </div>
+                    <script>
+                      // Animation du terminal (effet de frappe)
+                      document.addEventListener('DOMContentLoaded', function() {
+                        const lines = document.querySelectorAll('#animated-terminal .code-line');
+                        lines.forEach((line, i) => {
+                          line.style.opacity = '0';
+                          setTimeout(() => {
+                            line.style.opacity = '1';
+                            line.style.animation = 'codeTyping 0.5s ease-in-out';
+                          }, 600 + i * 500);
+                        });
+                      });
+                    </script>
                 </div>
                 <div class="hero-text" style="width:100%;text-align:center;">
-                    <h1 class="hero-title" style="font-size:2rem;font-weight:700;margin-bottom:10px;color:#06b6d4;">Phanel - <br>Développeur fullstack</h1>
+                    <div style="
+                        display:flex;
+                        flex-direction:column;
+                        align-items:center;
+                        justify-content:center;
+                        width:100%;
+                        margin-bottom:28px;
+                    ">
+                        <div style="
+                        background:linear-gradient(120deg,#18181b 0%,#23238e 40%,#06b6d4 100%);
+                        border-radius:22px;
+                        box-shadow:0 0 48px #06b6d4,0 2px 24px #6366f1,0 0 80px #23238e inset;
+                        padding:22px 32px;
+                        border:4px solid #06b6d4;
+                        max-width:95vw;
+                        width:fit-content;
+                        margin:0 auto;
+                        position:relative;
+                        overflow:hidden;
+                        animation:cyberBgMove 6s linear infinite;
+                        ">
+                            <div class="cyber-neon-border"></div>
+                            <div class="cyber-spark spark1"></div>
+                            <div class="cyber-spark spark2"></div>
+                            <div class="cyber-spark spark3"></div>
+                            <span id="hero-title-main" style="
+                                display:block;
+                                font-size:clamp(2.2rem,7vw,4.2rem);
+                                font-family:'JetBrains Mono','Arial Black','Impact','Inter',sans-serif;
+                                font-weight:900;
+                                color:#fff;
+                                letter-spacing:0.04em;
+                                text-transform:uppercase;
+                                text-align:center;
+                                margin-bottom:8px;
+                                position:relative;
+                                min-height:54px;
+                                overflow:hidden;
+                                border-right:3px solid #06b6d4;
+                                text-shadow:0 0 24px #06b6d4,0 2px 12px #6366f1,0 0 32px #23238e;
+                                filter:drop-shadow(0 0 8px #06b6d4);
+                            "></span>
+                            <span id="hero-title-sub" style="
+                                display:block;
+                                font-size:clamp(1.4rem,5vw,2.6rem);
+                                font-family:'Arial Black','Impact','Inter',sans-serif;
+                                font-weight:700;
+                                color:#06b6d4;
+                                text-shadow:0 0 32px #06b6d4,0 2px 18px #6366f1,0 0 32px #23238e;
+                                letter-spacing:0.08em;
+                                text-transform:uppercase;
+                                text-align:center;
+                                position:relative;
+                                opacity:0;
+                                animation:subGlowAppear 2.2s ease-in-out 1.6s forwards;
+                            ">Développeur Fullstack</span>
+                            <style>
+                                @keyframes subGlowAppear {
+                                    0% { opacity:0; filter:blur(12px); }
+                                    60% { opacity:0.7; filter:blur(2px); }
+                                    100% { opacity:1; filter:blur(0); }
+                                }
+                                @keyframes cyberBgMove {
+                                    0% { background-position:0 0; }
+                                    100% { background-position:200px 200px; }
+                                }
+                                .cyber-neon-border {
+                                    position:absolute;top:0;left:0;width:100%;height:100%;
+                                    border-radius:22px;
+                                    pointer-events:none;
+                                    box-shadow:0 0 32px #06b6d4,0 0 24px #6366f1 inset;
+                                    border:2px solid #06b6d4;
+                                    z-index:1;
+                                    animation:neonPulse 2.2s infinite alternate;
+                                }
+                                @keyframes neonPulse {
+                                    0% { box-shadow:0 0 32px #06b6d4,0 0 24px #6366f1 inset; border-color:#06b6d4; }
+                                    100% { box-shadow:0 0 64px #6366f1,0 0 48px #06b6d4 inset; border-color:#6366f1; }
+                                }
+                                .cyber-spark {
+                                    position:absolute;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle,#06b6d4 0%,#6366f1 80%,transparent 100%);
+                                    pointer-events:none;z-index:2;
+                                    opacity:0.7;
+                                }
+                                .spark1 {top:8px;left:18px;animation:sparkle 2.2s infinite alternate;}
+                                .spark2 {bottom:12px;right:22px;animation:sparkle 2.8s infinite alternate 1.1s;}
+                                .spark3 {top:50%;left:calc(100% - 24px);animation:sparkle 1.7s infinite alternate 0.7s;}
+                                @keyframes sparkle {
+                                    0% { opacity:0.7; transform:scale(1); }
+                                    100% { opacity:1; transform:scale(1.4); filter:blur(2px); }
+                                }
+                            </style>
+                            <script>
+                              // Effet typewriter sur le titre principal
+                              document.addEventListener('DOMContentLoaded', function() {
+                                var text = 'Phanel';
+                                var i = 0;
+                                var speed = 120;
+                                var el = document.getElementById('hero-title-main');
+                                function typeWriter() {
+                                  if (i < text.length) {
+                                    el.textContent += text.charAt(i);
+                                    i++;
+                                    setTimeout(typeWriter, speed);
+                                  } else {
+                                    el.style.borderRight = 'none';
+                                  }
+                                }
+                                el.textContent = '';
+                                typeWriter();
+                              });
+                            </script>
+                        </div>
+                    </div>
                     <div class="hero-description" style="font-size:1rem;color:#a1a1aa;margin-bottom:18px;">Créatif digital, rédacteur bilingue, traducteur et développeur freelance. Je donne vie à tes idées sur le web !</div>
                     <div class="hero-buttons" style="display:flex;flex-direction:column;gap:10px;align-items:center;margin-top:10px;">
                         <a href="contact.html" class="btn magnetic" style="background:linear-gradient(135deg,#6366f1 0%,#06b6d4 100%);color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:600;text-decoration:none;box-shadow:0 2px 8px #6366f1;">Me contacter</a>

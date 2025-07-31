@@ -6,9 +6,9 @@
     <title>Sixx - Portfolio Professionnel</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js" defer></script>
     <style>
         /* Laptop Styles */
         .laptop-container {
@@ -669,6 +669,12 @@
     <div class="loading">
         <div class="loading-spinner"></div>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loading = document.querySelector('.loading');
+        if(loading) loading.style.display = 'none';
+      });
+    </script>
 
     <!-- Background Animations -->
     <div class="background-animation">
@@ -682,12 +688,18 @@
     <div class="cursor-follower"></div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar sticky-navbar">
         <div class="navbar-container">
             <div class="logo">
                 <div class="logo-six">6</div>
                 <div class="logo-text">Sixx</div>
             </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" style="display:none;">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Accueil</a></li>
                 <li><a href="about.html">À propos</a></li>
@@ -728,12 +740,7 @@
                         <div class="laptop-device">
                             <div class="laptop-screen">
                                 <div class="screen-content">
-                                    <div class="code-line"><span class="code-keyword">function</span> <span class="code-function">createPortfolio</span>() {</div>
-                                    <div class="code-line indent-1"><span class="code-keyword">const</span> <span class="code-variable">skills</span> = [<span class="code-string">'React'</span>, <span class="code-string">'Node.js'</span>, <span class="code-string">'Design'</span>];</div>
-                                    <div class="code-line indent-1"><span class="code-keyword">return</span> <span class="code-string">'Amazing!'</span>;</div>
-                                    <div class="code-line">}</div>
-                                    <div class="code-line"><span class="code-comment">// Créatif digital & freelance</span></div>
-                                    <div class="code-line"><span class="code-comment">// Charbel Phanel</span></div>
+                                    <!-- Illustration laptop, pas de code affiché -->
                                 </div>
                                 <div class="screen-glow"></div>
                             </div>
@@ -798,6 +805,7 @@
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 88%"></div>
                             </div>
+                        </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Design</span>
@@ -996,7 +1004,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script>
       (function() {
         emailjs.init('TazJZurqyFEA7Vt7o');

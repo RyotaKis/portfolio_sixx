@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js" defer></script>
 </head>
 <body>
     <!-- Loading Screen -->
     <div class="loading">
         <div class="loading-spinner"></div>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loading = document.querySelector('.loading');
+        if(loading) loading.style.display = 'none';
+      });
+    </script>
 
     <!-- Background Animations -->
     <div class="background-animation">
@@ -26,12 +35,18 @@
     <div class="cursor-follower"></div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar sticky-navbar">
         <div class="navbar-container">
             <div class="logo">
                 <div class="logo-six">6</div>
                 <div class="logo-text">Sixx</div>
             </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" style="display:none;">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="about.html">À propos</a></li>
@@ -263,6 +278,7 @@
         }
       });
     </script>
+    <script src="script.js" defer></script>
     <style>
       /* Correction du style du select pour le type de projet */
       select.enhanced-input {

@@ -1,3 +1,19 @@
+/* Contact cards ultra responsive */
+@media (max-width: 700px) {
+  .grid.grid-2 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .card.contact-direct,
+  .card.contact-form-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto 15px auto !important;
+    box-sizing: border-box !important;
+    padding: 18px 10px !important;
+  }
+}
 /* Modern Portfolio CSS - Inspired by Linear, Vercel, Stripe */
 
 /* Import Google Fonts */

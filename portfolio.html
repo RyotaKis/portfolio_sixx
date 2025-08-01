@@ -83,156 +83,140 @@
 
     <!-- Portfolio Grid -->
     <section class="section">
-        <div class="container">
-            <div class="grid grid-3">
-                <!-- MyLib – Gestion de bibliothèque -->
-                <div class="project-card hover-3d" data-category="app">
-                    <div class="project-image" style="background-image:url('assets/Docflow.jpg');background-size:cover;"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">MyLib – Gestion de bibliothèque</h3>
-                        <p class="project-description">Application desktop pour gérer une bibliothèque (livres, emprunts, utilisateurs) avec interface CRUD, recherche dynamique et gestion MySQL.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Qt Widgets</span>
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">MySQL</span>
-                        </div>
-                        <div class="project-meta">Rôle : Dev fullstack</div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-secondary">Voir mockups</a>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="portfolio-grid">
+          <div class="portfolio-card" data-category="web">
+            <div class="portfolio-img-wrap">
+              <img src="assets/mylib.png" alt="MyLib" loading="lazy" class="portfolio-img" />
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-title">MyLib – Gestion de bibliothèque</h3>
+              <p class="portfolio-desc">Application desktop pour gérer une bibliothèque (CRUD, recherche dynamique, MySQL).</p>
+              <div class="portfolio-tags">
+                <span>Qt Widgets</span><span>C++</span><span>MySQL</span>
+              </div>
+              <div class="portfolio-actions">
+                <button class="btn btn-secondary" onclick="openPreview('assets/mylib.gif')">Aperçu</button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card" data-category="web">
+            <div class="portfolio-img-wrap">
+              <img src="assets/calcul+.png" alt="Calculatrice Vb" loading="lazy" class="portfolio-img" />
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-title">Appli Calculatrice </h3>
+              <p class="portfolio-desc">Application Qt pour effectuer des calculs mathématiques.</p>
+              <div class="portfolio-tags">
+                <span>C++</span><span>Qt</span>
+              </div>
+              <div class="portfolio-actions">
+                <button class="btn btn-secondary" onclick="openPreview('assets/calcul+.gif')">Aperçu</button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card" data-category="app">
+            <div class="portfolio-img-wrap">
+              <img src="assets/Docflow.jpg" alt="Docflow" loading="lazy" class="portfolio-img" />
+            </div>
+            <div class="portfolio-info">
+              <h3 class="portfolio-title">Docflow</h3>
+              <p class="portfolio-desc">Application web de gestion de documents électroniques avec authentification, recherche et espace admin et fonctionnalités avancées.</p>
+              <div class="portfolio-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+              </div>
+              <div class="portfolio-actions">
+                <button class="btn btn-secondary" onclick="openPreview('assets/docflow.gif')">Aperçu</button>
+              </div>
+            </div>
+          </div>
+            <div class="portfolio-card" data-category="app">
+                <div class="portfolio-img-wrap">
+                <img src="assets/ExamEase.png" alt="ExamEase" loading="lazy" class="portfolio-img" />
                 </div>
-                <!-- Système de gestion documentaire -->
-                <div class="project-card hover-3d" data-category="app">
-                    <div class="project-image" style="background-image:url('assets/mohammad-rahmani-8qEB0fTe9Vw-unsplash.jpg');background-size:cover;"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Système de gestion documentaire</h3>
-                        <p class="project-description">Application pro pour organiser, retrouver et consulter des fichiers numériques avec catégories et mots-clés. Interface claire, tri intelligent, performance.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">Qt</span>
-                        </div>
-                        <div class="project-meta">Rôle : Développeur principal</div>
-                    </div>
+                <div class="portfolio-info">
+                <h3 class="portfolio-title">ExamEase</h3>
+                <p class="portfolio-desc">Application de gestion d'examens avec création de quiz, gestion des utilisateurs et statistiques avancées.</p>
+                <div class="portfolio-tags">
+                    <span>Web Stack</span><span>HTML&CSS&Js</span>
                 </div>
-                <!-- Kontakto – Gestion de contacts -->
-                <div class="project-card hover-3d" data-category="app">
-                    <div class="project-image" style="background-image:url('assets/profile.png');background-size:cover;"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Kontakto – Gestion de contacts</h3>
-                        <p class="project-description">Mini app Laravel pour ajouter, modifier et organiser des contacts facilement. CRUD complet, responsive design.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Laravel</span>
-                            <span class="project-tag">Bootstrap</span>
-                            <span class="project-tag">Laragib</span>
-                        </div>
-                        <div class="project-meta">Rôle : Backend & Frontend</div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-secondary">Lien / Démo</a>
-                        </div>
-                    </div>
+                <div class="portfolio-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('assets/ExamEase.gif')">Aperçu</button>
                 </div>
-                <!-- Plateforme de vente de voitures -->
-                <div class="project-card hover-3d" data-category="web">
-                    <div class="project-image" style="background-image:url('assets/christopher-gower-m_HRfLhgABo-unsplash.jpg');background-size:cover;"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Plateforme de vente de voitures</h3>
-                        <p class="project-description">Site web dynamique pour achat/vente de voitures : galerie, carousel, formulaire connecté à la base de données, confirmation, UX fluide.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JS</span>
-                            <span class="project-tag">PHP</span>
-                        </div>
-                        <div class="project-meta">Rôle : Frontend & coordination backend</div>
-                    </div>
                 </div>
-                <!-- AzzyDev – Portfolio stylisé -->
-                <div class="project-card hover-3d" data-category="web">
-                    <div class="project-image" style="background-image:url('assets/meeee.png');background-size:cover;"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">AzzyDev – Mon portfolio stylisé</h3>
-                        <p class="project-description">Site vitrine personnel moderne, pages dynamiques, design responsive, animations douces. Accueil, À propos, galerie de projets.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Laravel</span>
-                            <span class="project-tag">Vite</span>
-                            <span class="project-tag">Tailwind CSS</span>
-                        </div>
-                        <div class="project-meta">Rôle : Web designer & fullstack</div>
-                    </div>
+        </div>
+            <div class="portfolio-card" data-category="ecommerce">
+                <div class="portfolio-img-wrap">
+                <img src="assets/géoclock.png" alt="Géoclock" loading="lazy" class="portfolio-img" />
                 </div>
-                <!-- Application d’examen sécurisé -->
-                <div class="project-card hover-3d" data-category="app">
-                    <div class="project-image" style="background-image:url('assets/MOI.jpg');background-size:cover;"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Application d’examen sécurisé</h3>
-                        <p class="project-description">Concept d’application mobile + système web pour sécuriser les examens (gestion sujets, sessions, accès, outils de contrôle).</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Flutter ?</span>
-                            <span class="project-tag">Laravel ?</span>
-                            <span class="project-tag">Node ?</span>
-                        </div>
-                        <div class="project-meta">Rôle : Concepteur, développeur & architecte</div>
-                    </div>
+                <div class="portfolio-info">
+                <h3 class="portfolio-title">Horloge Géographique avancée/h3>
+                <p class="portfolio-desc">Application Vb.console d'horloge intelligente.</p>
+                <div class="portfolio-tags">
+                    <span>Vb</span><span>Console</span>
                 </div>
-                <!-- Projet VB.NET – MySetup -->
-                <div class="project-card hover-3d" data-category="app">
-                    <div class="project-image" style="background-image:url('assets/laptop-code.jpg');background-size:cover;"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Projet VB.NET – MySetup</h3>
-                        <p class="project-description">Application Windows installable avec authentification, calculatrice, espace admin (CRUD utilisateurs), base MySQL.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">VB.NET</span>
-                            <span class="project-tag">MySQL</span>
-                            <span class="project-tag">Visual Studio</span>
-                            <span class="project-tag">Inno Setup</span>
-                        </div>
-                        <div class="project-meta">Rôle : Développeur fullstack</div>
-                    </div>
+                <div class="portfolio-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('assets/géoclock.gif')">Aperçu</button>
                 </div>
-                <!-- Services de rédaction & traduction -->
-                <div class="project-card hover-3d" data-category="web">
-                    <div class="project-image" style="background-image:url('assets/profile.png');background-size:cover;"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Services de rédaction & traduction</h3>
-                        <p class="project-description">Prestations freelance : articles de blog, traductions, contenus web. Style naturel, fluide, respect du ton. Plateformes : Fiverr, WhatsApp, missions directes.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">FR ↔ EN</span>
-                            <span class="project-tag">Blog</span>
-                            <span class="project-tag">Traduction</span>
-                        </div>
-                        <div class="project-meta">Rôle : Rédacteur & traducteur freelance</div>
-                    </div>
-                </div>
-                <!-- Projets historiques (exemples) -->
-                <div class="project-card hover-3d" data-category="web">
-                    <div class="project-image" style="background-image:url('assets/christopher-gower-m_HRfLhgABo-unsplash.jpg');background-size:cover;"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">E-commerce Moderne</h3>
-                        <p class="project-description">Plateforme e-commerce complète avec panier, paiements et gestion admin.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">Stripe</span>
-                        </div>
-                        <div class="project-meta">Rôle : Fullstack</div>
-                    </div>
-                </div>
-                <div class="project-card hover-3d" data-category="app">
-                    <div class="project-image" style="background-image:url('assets/mohammad-rahmani-8qEB0fTe9Vw-unsplash.jpg');background-size:cover;"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Dashboard Analytics</h3>
-                        <p class="project-description">Tableau de bord avec visualisations de données et rapports personnalisés.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Chart.js</span>
-                            <span class="project-tag">API REST</span>
-                        </div>
-                        <div class="project-meta">Rôle : Frontend</div>
-                    </div>
                 </div>
             </div>
+            <div class="portfolio-card" data-category="web">
+                <div class="portfolio-img-wrap">
+                <img src="assets/Kalkul.png" alt="Calculatrice" loading="lazy" class="portfolio-img" />
+                </div>
+                <div class="portfolio-info">
+                <h3 class="portfolio-title">Calculatrice</h3>
+                <p class="portfolio-desc">Application Vb de calculatrice avancée avec interface interactive.</p>
+                <div class="portfolio-tags">
+                    <span>Vb</span><span>Application Console Desktop</span>
+                </div>
+                <div class="portfolio-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('assets/Kalkul.gif')">Aperçu</button>
+                </div>
+                </div>
+                </div>
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-img-wrap">
+                    <img src="assets/parkauto.jpg" alt="Site Web" loading="lazy" class="portfolio-img" />
+                    </div>
+                    <div class="portfolio-info">
+                    <h3 class="portfolio-title">Site Web de Vente&Achat de voitures</h3>
+                    <p class="portfolio-desc">Site web responsive de concession automobile avec interface utilisateur et espace vente, espace achat et galerie</p>
+                    <div class="portfolio-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="portfolio-actions">
+                        <button class="btn btn-secondary" onclick="openPreview('assets/parkauto.gif')">Aperçu</button>
+                    </div>
+                    </div>
+      </div>
+
+       <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-img-wrap">
+                    <img src="assets/SkillSwap.png" alt="Site Web" loading="lazy" class="portfolio-img" />
+                    </div>
+                    <div class="portfolio-info">
+                    <h3 class="portfolio-title">Site Web de SkillSwap</h3>
+                    <p class="portfolio-desc">Plateforme d'échange de compétences avec interface utilisateur et fonctionnalités de chat</p>
+                    <div class="portfolio-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="portfolio-actions">
+                        <button class="btn btn-secondary" onclick="openPreview('assets/SkillSwap.gif')">Aperçu</button>
+                    </div>
+                    </div>
+      </div>
+      <!-- Card "Et pleins d'autres projets..." -->
+      <div class="portfolio-card special-card" style="justify-content:center;align-items:center;text-align:center;min-height:220px;">
+        <div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1em;">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" style="margin-bottom:0.5em;">
+            <circle cx="32" cy="32" r="32" fill="#06b6d4" opacity="0.18"/>
+            <text x="32" y="38" text-anchor="middle" font-size="2em" fill="#06b6d4" font-family="Inter,Arial,sans-serif">...</text>
+          </svg>
+          <h3 class="portfolio-title" style="font-size:1.3em;color:#06b6d4;text-shadow:0 2px 12px #06b6d4cc;">ET PLEINS D'AUTRES PROJETS...</h3>
+          <p class="portfolio-desc" style="color:#b3b3e6;font-size:1em;">Découvrez encore plus de réalisations sur demande ou lors d’un entretien !</p>
         </div>
+      </div>
     </section>
 
     <!-- Stats Section -->
@@ -240,20 +224,17 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Chiffres Clés</h2>
-                <p class="section-subtitle">Quelques statistiques de mes projets</p>
+                <p class="section-subtitle">Que retenir de mes projets ?</p>
             </div>
             <div class="stats">
                 <div class="stat">
-                    <div class="stat-number counter" data-target="25">0</div>
-                    <div class="stat-label">Projets réalisés</div>
+                    <div class="stat-number" style="font-size:1.15em;color:#06b6d4;font-weight:700;">Plus de 20 projets réalisés</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number counter" data-target="15">0</div>
-                    <div class="stat-label">Clients satisfaits</div>
+                    <div class="stat-number" style="font-size:1.15em;color:#06b6d4;font-weight:700;">100% de clients satisfaits</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number counter" data-target="3">0</div>
-                    <div class="stat-label">Années d'expérience</div>
+                    <div class="stat-number" style="font-size:1.15em;color:#06b6d4;font-weight:700;">Expérience professionnelle solide</div>
                 </div>
             </div>
         </div>
@@ -289,6 +270,24 @@
 
     <script src="script.js" defer></script>
     <script>
+      // Lightbox GIF
+      function openPreview(imgSrc) {
+        const modal = document.createElement('div');
+        modal.style.position = 'fixed';
+        modal.style.top = 0;
+        modal.style.left = 0;
+        modal.style.width = '100vw';
+        modal.style.height = '100vh';
+        modal.style.background = 'rgba(0,0,0,0.85)';
+        modal.style.display = 'flex';
+        modal.style.alignItems = 'center';
+        modal.style.justifyContent = 'center';
+        modal.style.zIndex = 9999;
+        modal.innerHTML = `<img src="${imgSrc}" style="max-width:90vw;max-height:90vh;border-radius:1em;box-shadow:0 0 32px #6c63ff;">\n          <span style=\"position:absolute;top:32px;right:48px;font-size:2em;color:#fff;cursor:pointer;\" onclick=\"this.parentNode.remove()\">×</span>`;
+        document.body.appendChild(modal);
+      }
+    </script>
+    <script>
       // Masquer l'écran de chargement après le chargement
       window.addEventListener('load', function() {
         const loading = document.querySelector('.loading');
@@ -296,6 +295,196 @@
       });
     </script>
     <style>
+    /* Nouvelle grille portfolio moderne et animée */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.2em;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    .portfolio-card {
+      background: rgba(36,36,60,0.92);
+      border-radius: 1.4em;
+      box-shadow: 0 6px 32px #6c63ff22, 0 2px 12px #06b6d422;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s, box-shadow 0.25s, filter 0.3s;
+      animation: fadeInUp 0.7s cubic-bezier(.23,1.01,.32,1) both;
+      position: relative;
+      will-change: transform, box-shadow, filter;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-12px) scale(1.045) rotate(-1deg);
+      box-shadow: 0 16px 64px #6c63ff66, 0 8px 32px #06b6d488;
+      filter: brightness(1.08) saturate(1.12) drop-shadow(0 0 16px #06b6d4);
+      animation: popCard 0.4s cubic-bezier(.23,1.01,.32,1);
+    }
+    .portfolio-card::before {
+      content: '';
+      position: absolute;
+      top: -40px; left: -40px;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, #06b6d4cc 0%, transparent 70%);
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity 0.3s;
+    }
+    .portfolio-card:hover::before {
+      opacity: 0.32;
+    }
+    .portfolio-img-wrap {
+      position: relative;
+    }
+    .portfolio-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 40%;
+      background: linear-gradient(0deg, #23234a88 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 2;
+      border-radius: 0 0 1.4em 1.4em;
+      transition: opacity 0.3s;
+      opacity: 0.7;
+    }
+    .portfolio-card:hover .portfolio-img-wrap::after {
+      opacity: 0.95;
+    }
+    .portfolio-title {
+      position: relative;
+      z-index: 3;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+    .portfolio-card:hover .portfolio-title {
+      color: #06b6d4;
+      text-shadow: 0 2px 12px #06b6d4cc;
+    }
+    .portfolio-tags span {
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    .portfolio-card:hover .portfolio-tags span {
+      background: #06b6d4;
+      color: #fff;
+      box-shadow: 0 2px 8px #06b6d4;
+    }
+    .portfolio-actions .btn {
+      position: relative;
+      overflow: hidden;
+      z-index: 3;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .portfolio-actions .btn::after {
+      content: '';
+      position: absolute;
+      left: 50%; top: 50%;
+      width: 0; height: 0;
+      background: rgba(255,255,255,0.18);
+      border-radius: 50%;
+      transform: translate(-50%,-50%);
+      transition: width 0.4s, height 0.4s;
+      z-index: 1;
+    }
+    .portfolio-actions .btn:active::after {
+      width: 180%; height: 180%;
+    }
+    .portfolio-actions .btn:hover {
+      background: linear-gradient(135deg,#06b6d4 0%,#6366f1 100%);
+      box-shadow: 0 4px 16px #06b6d4;
+      transform: scale(1.07);
+    }
+    @keyframes popCard {
+      0% { transform: scale(1) rotate(0deg); }
+      60% { transform: scale(1.08) rotate(-2deg); }
+      100% { transform: scale(1.045) rotate(-1deg); }
+    }
+    .portfolio-img-wrap {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      position: relative;
+      background: #18181b;
+      border-radius: 1.4em 1.4em 0 0;
+      box-shadow: 0 2px 12px #23238e22;
+    }
+    .portfolio-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: filter 0.3s;
+      filter: brightness(1) contrast(1.08);
+    }
+    .portfolio-card:hover .portfolio-img {
+      filter: brightness(1.08) contrast(1.15) saturate(1.1);
+    }
+    .portfolio-info {
+      padding: 1.4em 1.2em 1.2em 1.2em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7em;
+    }
+    .portfolio-title {
+      font-size: 1.18em;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.2em;
+      letter-spacing: 0.01em;
+    }
+    .portfolio-desc {
+      font-size: 1em;
+      color: #b3b3e6;
+      margin-bottom: 0.2em;
+    }
+    .portfolio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      margin-bottom: 0.2em;
+    }
+    .portfolio-tags span {
+      background: #6c63ff22;
+      color: #6c63ff;
+      border-radius: 0.7em;
+      padding: 0.2em 0.8em;
+      font-size: 0.95em;
+      font-weight: 500;
+    }
+    .portfolio-actions {
+      margin-top: 0.5em;
+      display: flex;
+      gap: 0.7em;
+    }
+    .portfolio-actions .btn {
+      font-size: 0.98em;
+      padding: 0.5em 1.2em;
+      border-radius: 1em;
+      background: linear-gradient(135deg,#6366f1 0%,#06b6d4 100%);
+      color: #fff;
+      border: none;
+      box-shadow: 0 2px 8px #6366f1;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .portfolio-actions .btn:hover {
+      background: #554ee6;
+      box-shadow: 0 4px 16px #6366f1;
+    }
+    @keyframes fadeInUp {
+      0% { opacity:0; transform:translateY(32px) scale(0.98); }
+      60% { opacity:0.7; transform:translateY(8px) scale(1.01); }
+      100% { opacity:1; transform:translateY(0) scale(1); }
+    }
+    @media (max-width: 900px) {
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .portfolio-card { border-radius: 1em; }
+      .portfolio-img-wrap { border-radius: 1em 1em 0 0; }
+    }
       /* Responsive grid portfolio */
       .grid.grid-3 {
         display: grid;
@@ -325,14 +514,17 @@
         width: 100%;
         aspect-ratio: 16/9;
         border-radius: 1.2em 1.2em 0 0;
-      }
-      .project-content {
-        padding: 1.2em;
-      }
-      .project-title { font-size: 1.2em; font-weight: 700; margin-bottom: 0.5em; }
-      .project-description { font-size: 1em; margin-bottom: 0.7em; }
-      .project-tags { display: flex; flex-wrap: wrap; gap: 0.5em; margin-bottom: 0.7em; }
-      .project-tag { background: #6c63ff22; color: #6c63ff; border-radius: 0.7em; padding: 0.2em 0.8em; font-size: 0.95em; }
+    /* Suppression manuelle du bloc CSS .project-image::after pour retirer tout overlay sur les images */
+    /* .project-image::after { */
+    /*     content: ''; */
+    /*     position: absolute; */
+    /*     top: 0; left: 0; width: 100%; height: 100%; */
+    /*     pointer-events: none; */
+    /*     border-radius: 1.2em 1.2em 0 0; */
+    /*     background: linear-gradient(120deg, rgba(99,99,255,0.03) 0%, rgba(99,99,255,0.01) 100%); */
+    /*     filter: blur(1px); */
+    /*     z-index: 1; */
+    /* } */
       .project-meta { font-size: 0.95em; color: #b3b3e6; margin-bottom: 0.7em; }
       .project-links { margin-top: 0.7em; }
       .btn.btn-secondary { background: #6c63ff; color: #fff; border-radius: 1em; padding: 0.5em 1.2em; border: none; cursor: pointer; transition: background 0.2s; }
@@ -357,41 +549,54 @@
       }
     </style>
     <script>
-        // Portfolio filtering
+        // Portfolio filtering + animation dynamique
         const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
+        const projectCards = document.querySelectorAll('.portfolio-card');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active class from all buttons
                 filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
                 btn.classList.add('active');
-
                 const filter = btn.getAttribute('data-filter');
-
                 projectCards.forEach(card => {
                     if (filter === 'all' || card.getAttribute('data-category') === filter) {
                         card.style.display = 'block';
+                        card.style.pointerEvents = 'auto';
                         gsap.to(card, {
                             opacity: 1,
                             scale: 1,
-                            duration: 0.5,
+                            y: 0,
+                            filter: 'blur(0px)',
+                            duration: 0.6,
                             ease: "power2.out"
                         });
                     } else {
                         gsap.to(card, {
                             opacity: 0,
                             scale: 0.8,
-                            duration: 0.3,
+                            y: 32,
+                            filter: 'blur(6px)',
+                            duration: 0.4,
                             ease: "power2.in",
                             onComplete: () => {
                                 card.style.display = 'none';
+                                card.style.pointerEvents = 'none';
                             }
                         });
                     }
                 });
             });
+        });
+        // Animation d'apparition en cascade
+        window.addEventListener('DOMContentLoaded', () => {
+          gsap.from('.portfolio-card', {
+            opacity: 0,
+            y: 48,
+            scale: 0.96,
+            stagger: 0.13,
+            duration: 0.7,
+            ease: 'power2.out'
+          });
         });
     </script>
 </body>

@@ -641,7 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(el => observer.observe(el));
 });
 
-// Smooth page transitions
+// Transition entre mes pages
 window.addEventListener('beforeunload', () => {
     gsap.to('body', {
         opacity: 0,
@@ -650,9 +650,9 @@ window.addEventListener('beforeunload', () => {
     });
 });
 
-// Initialize when page is fully loaded
+// initialisation après chargement total
 window.addEventListener('load', () => {
-    // Final initialization
+    // Finale
     gsap.to('body', {
         opacity: 1,
         duration: 0.5,
